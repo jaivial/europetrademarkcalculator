@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider as JotaiProvider } from 'jotai';
+import { useTranslation } from 'react-i18next';
 import { I18nProvider } from '@/providers/I18nProvider';
 import AppLayout from '@/components/Layout/AppLayout';
 import { TabNavigation } from '@/components/Navigation/TabNavigation';
@@ -122,10 +123,16 @@ export const App: React.FC = () => {
  * 5. Content transitions smoothly via CSS animations
  */
 const MainContent: React.FC = () => {
+  const { t } = useTranslation('common');
   const selectedCountry = useAtomValue(selectedCountryAtom);
 
   return (
     <div className="app-main-content">
+      {/* App Title - Centered above tabs */}
+      <h1 className="app-title">
+        {t('appTitle', { defaultValue: 'EU Brand Calculator' })}
+      </h1>
+
       {/* Tab Navigation - Always visible, allows tab switching */}
       <TabNavigation />
 

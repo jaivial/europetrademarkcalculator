@@ -15,11 +15,10 @@
 }
 
 .container {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto;
-  gap: 16px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  gap: 16px;
   height: 100%;
   min-height: 64px;
   padding: 12px 24px;
@@ -35,26 +34,6 @@
   flex-shrink: 0;
 }
 
-.titleSection {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  min-width: 0;
-  flex: 1;
-  overflow: hidden;
-}
-
-.title {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0;
-  padding: 0;
-  color: var(--header-title, #000000);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-height: 1.2;
-}
 
 .controlsSection {
   display: flex;
@@ -136,7 +115,6 @@
 /* Extra Small Devices (200px - 360px) */
 @media (max-width: 360px) {
   .container {
-    grid-template-columns: auto 1fr auto;
     gap: 6px;
     padding: 8px 10px;
     min-height: 52px;
@@ -144,14 +122,6 @@
 
   .header {
     min-height: 52px;
-  }
-
-  .title {
-    font-size: 14px;
-  }
-
-  .titleSection {
-    display: none;
   }
 
   .controlSlot {
@@ -162,7 +132,6 @@
 /* Small Devices (361px - 480px) */
 @media (max-width: 480px) {
   .container {
-    grid-template-columns: auto 1fr auto;
     gap: 8px;
     padding: 8px 12px;
     min-height: 54px;
@@ -170,10 +139,6 @@
 
   .header {
     min-height: 54px;
-  }
-
-  .title {
-    font-size: 15px;
   }
 
   .controlSlot {
@@ -193,10 +158,6 @@
     min-height: 58px;
   }
 
-  .title {
-    font-size: 17px;
-  }
-
   .controlSlot {
     padding: 4px;
   }
@@ -208,10 +169,6 @@
     gap: 16px;
     padding: 12px 20px;
     min-height: 64px;
-  }
-
-  .title {
-    font-size: 20px;
   }
 
   .controlSlot {
@@ -232,10 +189,6 @@
     min-height: 70px;
   }
 
-  .title {
-    font-size: 22px;
-  }
-
   .controlSlot {
     padding: 8px;
   }
@@ -250,10 +203,6 @@
 
   .header {
     min-height: 52px;
-  }
-
-  .title {
-    font-size: 16px;
   }
 }
 
@@ -281,10 +230,6 @@
   background-color: transparent;
 }
 
-[data-theme="dark"] .title {
-  color: #f1f5f9;
-}
-
 [data-theme="dark"] .controlSlot {
   color: #e2e8f0;
 }
@@ -294,7 +239,6 @@
   .header {
     --header-bg: #0f172a;
     --header-border: #334155;
-    --header-title: #f1f5f9;
   }
 }
 
@@ -302,10 +246,6 @@
 @media (prefers-contrast: more) {
   .header {
     border-bottom-width: 2px;
-  }
-
-  .title {
-    font-weight: 700;
   }
 }
 

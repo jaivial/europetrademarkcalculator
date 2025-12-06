@@ -89,13 +89,6 @@ const Header: React.FC<HeaderProps> = ({
           <Logo />
         </div>
 
-        {/* Title Section */}
-        <div className={styles.titleSection}>
-          <h1 className={styles.title}>
-            {t('appTitle', { defaultValue: 'EU Brand Calculator' })}
-          </h1>
-        </div>
-
         {/* Controls Section - Theme Toggle and Language Selector */}
         <div className={styles.controlsSection}>
           {/* Theme Toggle Button */}
