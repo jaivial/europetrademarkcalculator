@@ -358,6 +358,7 @@ export const EuropeMap: React.FC<EuropeMapProps> = ({
         series={{
           regions: [
             {
+              attribute: 'fill',
               values: regionValues,
               scale: [
                 '#e2e8f0', // 0: Default (not in list)
