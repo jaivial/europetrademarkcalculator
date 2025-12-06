@@ -1,0 +1,352 @@
+{
+  "navigation": {
+    "worldMap": "Wereldkaart",
+    "countryList": "Landenlijst"
+  },
+
+  "common": {
+    "appTitle": "Merkregistratiecalculator",
+    "appDescription": "Bereken merkregistratiekosten in Europese landen",
+    "language": "Taal",
+    "country": "Land",
+    "currency": "EUR",
+    "loading": "Bezig met laden...",
+    "error": "Er is een fout opgetreden",
+    "success": "Geslaagd",
+    "cancel": "Annuleren",
+    "confirm": "Bevestigen",
+    "close": "Sluiten",
+    "back": "Terug",
+    "next": "Volgende",
+    "save": "Opslaan",
+    "delete": "Verwijderen",
+    "edit": "Bewerken",
+    "search": "Zoeken",
+    "clear": "Wissen",
+    "reset": "Opnieuw instellen",
+    "noResults": "Geen resultaten gevonden"
+  },
+  "navigation": {
+    "worldMap": "Wereldkaart",
+    "countryList": "Landlijst",
+    "calculator": "Calculator",
+    "about": "Over ons",
+    "contact": "Contact",
+    "help": "Hulp"
+  },
+  "theme": {
+    "dark": "Donker",
+    "light": "Licht",
+    "system": "Systeem",
+    "toggleTheme": "Ontwerp omschakelen"
+  },
+  "calculator": {
+    "title": "Merkregistratiecalculator",
+    "subtitle": "Bereken uw registratiekosten",
+    "numberOfClasses": "Aantal klassen",
+    "classesLabel": "Klassen",
+    "registrationType": "Registratietype",
+    "standard": "Standaard",
+    "express": "Express",
+    "priority": "Prioriteit",
+    "optionalServices": "Aanvullende diensten",
+    "monitoring": "Bewaking",
+    "legalSupport": "Juridische ondersteuning",
+    "fastTrack": "Snelle verwerking",
+    "basePrice": "Basisprijs",
+    "servicesPrice": "Servicebijdragen",
+    "totalPrice": "Totaalprijs",
+    "calculate": "Berekenen",
+    "resetCalculator": "Opnieuw instellen",
+    "priceEstimate": "Geschatte kosten",
+    "perClass": "per klasse",
+    "savings": "Besparingen"
+  },
+  "globe": {
+    "title": "Wereldkaart",
+    "selectCountry": "Selecteer een land",
+    "rotating": "Automatische rotatie",
+    "stopRotation": "Rotatie stoppen",
+    "startRotation": "Rotatie starten",
+    "zoom": "Zoom",
+    "zoomIn": "Inzoomen",
+    "zoomOut": "Uitzoomen",
+    "resetView": "Weergave opnieuw instellen",
+    "noCountrySelected": "Geen land geselecteerd",
+    "selectToCalculate": "Selecteer een land om te beginnen"
+  },
+  "countryList": {
+    "title": "Landlijst",
+    "searchPlaceholder": "Zoek naar een land...",
+    "filter": "Filteren",
+    "continent": "Continent",
+    "europe": "Europa",
+    "asia": "Azië",
+    "africa": "Afrika",
+    "americas": "Amerika",
+    "oceania": "Oceanië",
+    "all": "Alle",
+    "countries": "Landen",
+    "selectedCountries": "Geselecteerde landen",
+    "noCountries": "Geen landen gevonden",
+    "clearSelection": "Selectie wissen"
+  },
+  "pricing": {
+    "title": "Prijsstelling",
+    "basePrice": "Basisprijs",
+    "additionalServices": "Aanvullende diensten",
+    "currency": "EUR",
+    "estimatedCost": "Geschatte kosten",
+    "finalPrice": "Uiteindelijke prijs",
+    "discounts": "Kortingen",
+    "vatNotIncluded": "BTW niet inbegrepen",
+    "priceBreakdown": "Kostenuitsplitsing"
+  },
+  "validation": {
+    "required": "Dit veld is vereist",
+    "invalidInput": "Ongeldige invoer",
+    "minValue": "Minimumwaarde: {value}",
+    "maxValue": "Maximumwaarde: {value}",
+    "selectCountry": "Selecteer een land",
+    "selectAtLeastOne": "Selecteer minstens één item"
+  },
+  "footer": {
+    "product": {
+      "title": "Product",
+      "home": "Home",
+      "calculator": "Calculator",
+      "features": "Functies",
+      "pricing": "Prijzen"
+    },
+    "company": {
+      "title": "Bedrijf",
+      "about": "Over Ons",
+      "blog": "Blog",
+      "contact": "Contact",
+      "careers": "Vacatures"
+    },
+    "legal": {
+      "title": "Juridisch",
+      "privacy": "Privacybeleid",
+      "terms": "Servicevoorwaarden",
+      "cookies": "Cookiebeleid",
+      "compliance": "Naleving"
+    },
+    "copyright": {
+      "text": "{{year}} Brand Calculator. Alle rechten voorbehouden."
+    },
+    "branding": {
+      "description": "Bereken merkregistratiekosten in Europese landen"
+    },
+    "social": {
+      "twitter": "Volg ons op Twitter",
+      "linkedin": "Verbind op LinkedIn",
+      "github": "Bekijk op GitHub",
+      "email": "E-mail ons"
+    },
+    "version": {
+      "label": "Versie",
+      "number": "1.0.0"
+    }
+  },
+
+  "legal": {
+    "backToHome": "Terug naar Home",
+    "lastUpdated": "Laatst bijgewerkt: december 2024",
+    "createdBy": "Met liefde gemaakt door",
+
+    "privacy": {
+      "title": "Privacybeleid",
+      "introduction": "1. Inleiding",
+      "introText1": "Welkom bij de Merkregistratiecalculator. Dit Privacybeleid legt uit hoe wij met informatie omgaan wanneer u onze website en diensten gebruikt.",
+      "importantNotice": "Belangrijke Mededeling:",
+      "introText2": "Dit is een educatief, non-profit project gemaakt door Jaime Villanueva Acon via Jaime Digital Studio uitsluitend voor zelfstudie en gemeenschapsvoordeel. Wij verzamelen, bewaren of verwerken geen persoonlijke gegevens.",
+      "noCollect": "2. Informatie die wij NIET verzamelen",
+      "noCollectText": "Deze website is ontworpen met privacy als kernprincipe. Wij:",
+      "noCollectList": {
+        "0": "Verzamelen geen persoonlijke informatie (namen, e-mails, telefoonnummers)",
+        "1": "Volgen uw surfgedrag niet",
+        "2": "Gebruiken geen analyse- of trackingdiensten",
+        "3": "Slaan geen cookies op voor trackingdoeleinden",
+        "4": "Delen geen gegevens met derden",
+        "5": "Maken geen gebruikersaccounts of profielen",
+        "6": "Verwerken geen betalingsinformatie"
+      },
+      "localStorage": "3. Lokale Opslag",
+      "localStorageText": "Wij kunnen de lokale opslag van uw browser uitsluitend gebruiken voor:",
+      "localStorageList": {
+        "0": "Het opslaan van uw taalvoorkeur",
+        "1": "Het bewaren van uw themavoorkeur (lichte/donkere modus)"
+      },
+      "localStorageNote": "Deze gegevens verlaten nooit uw apparaat en worden niet naar een server verzonden.",
+      "thirdParty": "4. Diensten van Derden",
+      "thirdPartyText": "Onze website kan links bevatten naar externe websites (LinkedIn, GitHub, Instagram, portfolio). Wanneer u op deze links klikt, verlaat u onze website en bent u onderworpen aan het privacybeleid van die externe sites.",
+      "educational": "5. Educatief Doel",
+      "educationalText": "Dit project is volledig gemaakt voor educatieve en zelfstudie doeleinden. Het is:",
+      "educationalList": {
+        "0": "Niet-commercieel en non-profit",
+        "1": "Open voor gemeenschapsleren",
+        "2": "Een demonstratie van webontwikkelingsvaardigheden",
+        "3": "Niet bedoeld voor daadwerkelijke merkregistratiediensten"
+      },
+      "children": "6. Privacy van Kinderen",
+      "childrenText": "Onze website verzamelt bewust geen informatie van wie dan ook, inclusief kinderen onder de 13 jaar.",
+      "changes": "7. Wijzigingen in dit Beleid",
+      "changesText": "Wij kunnen dit Privacybeleid van tijd tot tijd bijwerken. Wijzigingen worden op deze pagina gepubliceerd met een bijgewerkte datum.",
+      "contact": "8. Contact",
+      "contactText": "Als u vragen heeft over dit Privacybeleid, kunt u contact opnemen via:"
+    },
+
+    "terms": {
+      "title": "Servicevoorwaarden",
+      "agreement": "1. Instemming met Voorwaarden",
+      "agreementText": "Door de website van de Merkregistratiecalculator te bezoeken, stemt u ermee in gebonden te zijn aan deze Servicevoorwaarden. Als u het niet eens bent met een deel van deze voorwaarden, gebruik onze website dan niet.",
+      "disclaimer": "2. Educatieve Doeleinden Disclaimer",
+      "disclaimerNote": "Dit is GEEN commerciële dienst.",
+      "disclaimerText": "De Merkregistratiecalculator is een educatief project gemaakt door Jaime Villanueva Acon via Jaime Digital Studio voor de volgende doeleinden:",
+      "disclaimerList": {
+        "0": "Zelfstudie en vaardigheidsontwikkeling",
+        "1": "Demonstratie van webontwikkelingscapaciteiten",
+        "2": "Bijdrage aan de open-source gemeenschap",
+        "3": "Anderen helpen over webtechnologieën te leren"
+      },
+      "disclaimerNonProfit": "Dit project is volledig non-profit en altruïstisch van aard.",
+      "noServices": "3. Geen Professionele Diensten",
+      "important": "Belangrijk:",
+      "noServicesText": "Deze website biedt NIET:",
+      "noServicesList": {
+        "0": "Daadwerkelijke merkregistratiediensten",
+        "1": "Juridisch advies of consultatie",
+        "2": "Officiële prijzen voor merkregistratie",
+        "3": "Garanties over merkgoedkeuring",
+        "4": "Enige vorm van commerciële dienst"
+      },
+      "noServicesNote": "Alle getoonde prijsinformatie is alleen voor demonstratiedoeleinden en weerspiegelt mogelijk niet de werkelijke kosten. Voor daadwerkelijke merkregistratie raadpleegt u officiële merkenbureaus en gekwalificeerde juridische professionals.",
+      "use": "4. Gebruik van de Website",
+      "useText": "U stemt ermee in deze website alleen te gebruiken voor:",
+      "useList": {
+        "0": "Educatieve en informatieve doeleinden",
+        "1": "Leren over merkregistratieconcepten",
+        "2": "Verkennen van webontwikkelingstechnieken"
+      },
+      "notUse": "U stemt ermee in om NIET:",
+      "notUseList": {
+        "0": "Dit voor te stellen als een officiële merkendienst",
+        "1": "De informatie te gebruiken voor zakelijke beslissingen zonder professionele verificatie",
+        "2": "Te proberen de beveiliging van de website in gevaar te brengen",
+        "3": "De inhoud te kopiëren of te verspreiden voor commerciële doeleinden"
+      },
+      "ip": "5. Intellectueel Eigendom",
+      "ipText": "Dit project is gemaakt door Jaime Villanueva Acon / Jaime Digital Studio. De code en het ontwerp zijn voor educatieve demonstratie. Als u een deel van dit project wilt gebruiken:",
+      "ipList": {
+        "0": "Geef dan de juiste vermelding",
+        "1": "Gebruik het alleen voor niet-commerciële doeleinden",
+        "2": "Stel het niet voor als uw eigen werk"
+      },
+      "warranty": "6. Afwijzing van Garanties",
+      "warrantyText": "Deze website wordt 'zoals is' aangeboden zonder enige garantie, expliciet of impliciet. Wij garanderen niet:",
+      "warrantyList": {
+        "0": "De nauwkeurigheid van prijsschattingen",
+        "1": "De volledigheid van informatie",
+        "2": "De beschikbaarheid van de website",
+        "3": "De geschiktheid voor een bepaald doel"
+      },
+      "liability": "7. Beperking van Aansprakelijkheid",
+      "liabilityText": "In geen geval zullen Jaime Villanueva Acon of Jaime Digital Studio aansprakelijk zijn voor schade die voortvloeit uit het gebruik van deze educatieve website. Dit omvat, maar is niet beperkt tot:",
+      "liabilityList": {
+        "0": "Beslissingen genomen op basis van de verstrekte informatie",
+        "1": "Verlies van gegevens of bedrijfsonderbreking",
+        "2": "Directe, indirecte of gevolgschade"
+      },
+      "external": "8. Externe Links",
+      "externalText": "Onze website bevat links naar externe websites. Wij zijn niet verantwoordelijk voor de inhoud, privacypraktijken of servicevoorwaarden van externe sites.",
+      "changesTerms": "9. Wijzigingen in Voorwaarden",
+      "changesTermsText": "Wij behouden ons het recht voor deze voorwaarden op elk moment te wijzigen. Wijzigingen worden onmiddellijk van kracht na publicatie op deze pagina.",
+      "contact": "10. Contact",
+      "contactText": "Voor vragen over deze Servicevoorwaarden kunt u contact opnemen met:"
+    },
+
+    "cookies": {
+      "title": "Cookiebeleid",
+      "about": "1. Over dit Beleid",
+      "aboutText": "Dit Cookiebeleid legt uit hoe de Merkregistratiecalculator, een educatief project van Jaime Villanueva Acon / Jaime Digital Studio, cookies en vergelijkbare technologieën gebruikt.",
+      "shortVersion": "Korte Versie:",
+      "aboutShort": "Wij gebruiken minimale lokale opslag alleen voor essentiële functionaliteit. Wij gebruiken GEEN tracking cookies of analytics.",
+      "whatAre": "2. Wat zijn Cookies?",
+      "whatAreText": "Cookies zijn kleine tekstbestanden die op uw apparaat worden opgeslagen wanneer u websites bezoekt. Ze worden vaak gebruikt voor:",
+      "whatAreList": {
+        "0": "Het onthouden van uw voorkeuren",
+        "1": "U ingelogd houden",
+        "2": "Het volgen van websitegebruik (analytics)",
+        "3": "Het tonen van gerichte advertenties"
+      },
+      "privacyFirst": "3. Onze Aanpak: Privacy Eerst",
+      "privacyFirstText": "Als een educatief, non-profit project geven wij prioriteit aan uw privacy. Wij gebruiken GEEN:",
+      "trackingCookies": "Tracking cookies",
+      "trackingCookiesDesc": "Wij monitoren uw gedrag niet",
+      "analyticsCookies": "Analytics cookies",
+      "analyticsCookiesDesc": "Geen Google Analytics of vergelijkbare diensten",
+      "advertisingCookies": "Advertentie cookies",
+      "advertisingCookiesDesc": "Geen advertenties, geen advertentietracking",
+      "thirdPartyCookies": "Cookies van derden",
+      "thirdPartyCookiesDesc": "Geen externe tracking",
+      "socialMediaCookies": "Social media cookies",
+      "socialMediaCookiesDesc": "Links bevatten geen trackers",
+      "whatWeUse": "4. Wat Wij Gebruiken: Lokale Opslag",
+      "whatWeUseText": "Wij gebruiken browser lokale opslag (geen cookies) voor twee essentiële doeleinden:",
+      "languagePref": "Taalvoorkeur",
+      "themePref": "Themavoorkeur",
+      "key": "Sleutel",
+      "purpose": "Doel",
+      "duration": "Duur",
+      "dataStored": "Opgeslagen gegevens",
+      "languagePurpose": "Uw voorkeurstaal onthouden",
+      "themePurpose": "Lichte/donkere modus voorkeur onthouden",
+      "untilCleared": "Tot u browsergegevens wist",
+      "languageCode": "Taalcode (bijv. 'nl', 'en')",
+      "themeValue": "'light' of 'dark'",
+      "differences": "5. Belangrijkste Verschillen: Cookies vs Lokale Opslag",
+      "feature": "Functie",
+      "cookiesColumn": "Cookies",
+      "localStorageColumn": "Lokale Opslag",
+      "sentToServer": "Naar server verzonden",
+      "yesEveryRequest": "Ja, bij elk verzoek",
+      "noStaysOnDevice": "Nee, blijft op apparaat",
+      "accessedByOthers": "Toegankelijk voor andere sites",
+      "sometimesThirdParty": "Soms (derden)",
+      "no": "Nee",
+      "usedForTracking": "Gebruikt voor tracking",
+      "often": "Vaak",
+      "rarely": "Zelden",
+      "whyLocalStorage": "Wij kozen lokale opslag omdat uw voorkeuren nooit uw apparaat verlaten.",
+      "managing": "6. Uw Gegevens Beheren",
+      "managingText": "U kunt lokale opslaggegevens op elk moment verwijderen:",
+      "chromeInstructions": "Instellingen → Privacy → Browsegegevens wissen → Sitegegevens",
+      "firefoxInstructions": "Instellingen → Privacy → Gegevens wissen",
+      "safariInstructions": "Voorkeuren → Privacy → Websitegegevens beheren",
+      "edgeInstructions": "Instellingen → Privacy → Browsegegevens wissen",
+      "clearingNote": "Het wissen van deze gegevens reset uw taal- en themavoorkeuren naar standaardwaarden.",
+      "externalLinks": "7. Externe Links",
+      "externalLinksText": "Onze footer bevat links naar:",
+      "portfolio": "portfolio",
+      "externalLinksNote": "Deze externe sites hebben hun eigen cookiebeleid. Wij raden aan deze te bekijken wanneer u ze bezoekt.",
+      "updates": "8. Updates van dit Beleid",
+      "updatesText": "Wij kunnen dit beleid bijwerken als wij veranderen hoe wij met gegevens omgaan. De 'Laatst bijgewerkt' datum bovenaan zal wijzigingen weergeven.",
+      "contact": "9. Contact",
+      "contactText": "Vragen over dit Cookiebeleid? Neem contact met ons op via:"
+    }
+  },
+
+  "messages": {
+    "success": "Actie geslaagd",
+    "error": "Er is een fout opgetreden",
+    "warning": "Waarschuwing",
+    "info": "Informatie",
+    "noData": "Geen gegevens beschikbaar",
+    "tryAgain": "Probeer het opnieuw",
+    "loading": "Bezig met laden, even geduld...",
+    "saved": "Succesvol opgeslagen",
+    "deleted": "Succesvol verwijderd",
+    "updated": "Succesvol bijgewerkt"
+  }
+}

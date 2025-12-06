@@ -1,0 +1,170 @@
+/* App.css - Main application layout styles */
+
+/* Main Content Container */
+.app-main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  padding: 16px;
+  gap: 16px;
+}
+
+/* Content Wrapper - Split layout */
+.app-content-wrapper {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  width: 100%;
+  min-height: 500px;
+  transition: all 0.3s ease-out;
+}
+
+/* Map/List Section - Takes full width when no panel */
+.app-map-section {
+  flex: 1;
+  min-height: calc(100vh - 200px);
+  height: calc(100vh - 200px);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg-secondary, #f5f5f5);
+  transition: none; /* Disable transition to prevent render glitch */
+}
+
+/* Ensure jvectormap fills its container */
+.app-map-section > div,
+.app-map-section .jvectormap-container {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: inherit !important;
+}
+
+.app-map-section svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Panel Section - Slides in from right */
+.app-panel-section {
+  width: 480px;
+  min-width: 380px;
+  max-width: 550px;
+  flex-shrink: 0;
+  animation: slideInPanel 0.3s ease-out;
+}
+
+@keyframes slideInPanel {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* When panel is shown, map section adjusts - force immediate resize */
+.app-content-wrapper.has-panel .app-map-section {
+  flex: 1;
+  height: calc(100vh - 200px);
+}
+
+/* Responsive: Stack on smaller screens */
+@media (max-width: 900px) {
+  .app-content-wrapper {
+    flex-direction: column;
+  }
+
+  .app-panel-section {
+    width: 100%;
+    max-width: 100%;
+    order: -1; /* Panel on top on mobile */
+  }
+
+  .app-map-section {
+    min-height: 450px;
+    height: calc(100vh - 300px);
+  }
+}
+
+@media (max-width: 600px) {
+  .app-main-content {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .app-content-wrapper {
+    gap: 12px;
+    min-height: 400px;
+  }
+
+  .app-map-section {
+    min-height: 400px;
+    height: calc(100vh - 250px);
+  }
+
+  .app-panel-section {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .app-main-content {
+    padding: 4px;
+  }
+
+  .app-map-section {
+    min-height: 350px;
+    height: calc(100vh - 200px);
+  }
+}
+
+/* Very wide screens - center content */
+@media (min-width: 1600px) {
+  .app-content-wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 2400px) {
+  .app-content-wrapper {
+    max-width: 2000px;
+  }
+
+  .app-panel-section {
+    width: 600px;
+    max-width: 650px;
+  }
+
+  .app-map-section {
+    min-height: 800px;
+    height: calc(100vh - 150px);
+  }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .app-main-content {
+  background: transparent;
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .app-content-wrapper {
+  background: transparent;
+}
+
+[data-theme="dark"] .app-map-section {
+  background: #1e293b;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .app-panel-section {
+  background: transparent;
+}
+
+/* Light theme adjustments */
+[data-theme="light"] .app-map-section {
+  background: #f0f4f8;
+}

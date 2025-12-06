@@ -1,0 +1,113 @@
+/* WorldMap3D Container Styles */
+
+.container {
+  /* Responsive sizing - fills available space */
+  width: 100%;
+  min-width: 200px;
+  max-width: 3000px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+
+  /* Mobile constraint: minimum height on small screens */
+  min-height: 200px;
+
+  /* Positioning context for absolute positioned children */
+  position: relative;
+  overflow: hidden;
+
+  /* Smooth transitions on resize */
+  transition: all 0.3s ease-out;
+}
+
+/* Canvas fills the entire container */
+.canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 320px) {
+  .container {
+    min-width: 200px;
+    aspect-ratio: 4 / 3;
+    min-height: 150px;
+  }
+}
+
+/* Tablet sizing optimization */
+@media (min-width: 768px) {
+  .container {
+    aspect-ratio: 16 / 9;
+    min-height: 400px;
+  }
+}
+
+/* Desktop sizing optimization */
+@media (min-width: 1024px) {
+  .container {
+    aspect-ratio: 16 / 9;
+    min-height: 600px;
+  }
+}
+
+/* Large desktop optimization */
+@media (min-width: 1920px) {
+  .container {
+    aspect-ratio: 16 / 9;
+    min-height: 800px;
+  }
+}
+
+/* Ultra-wide screen support */
+@media (min-width: 2560px) {
+  .container {
+    aspect-ratio: 21 / 9;
+    min-height: 1000px;
+  }
+}
+
+/* Overlay layer for UI controls positioned over canvas */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Allow interaction through overlay for specific elements */
+.overlay > * {
+  pointer-events: auto;
+}
+
+/* Loading state background */
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

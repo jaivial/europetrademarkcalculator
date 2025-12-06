@@ -1,0 +1,136 @@
+{
+  "layer": 1,
+  "type": "static-analysis",
+  "project": "brand-calculator",
+  "timestamp": "2025-12-05T19:00:00-05:00",
+  "tests": {
+    "typescript": {
+      "target": "type-checking",
+      "status": "FAIL",
+      "duration": "~2s",
+      "summary": {
+        "errors": 6,
+        "warnings": 0,
+        "files_checked": 145
+      },
+      "details": [
+        {
+          "file": "src/hooks/useResponsive.ts",
+          "line": 137,
+          "column": 22,
+          "severity": "error",
+          "code": "TS1128",
+          "message": "Declaration or statement expected."
+        },
+        {
+          "file": "src/hooks/useResponsive.ts",
+          "line": 138,
+          "column": 2,
+          "severity": "error",
+          "code": "TS1109",
+          "message": "Expression expected."
+        },
+        {
+          "file": "src/hooks/useResponsive.ts",
+          "line": 138,
+          "column": 7,
+          "severity": "error",
+          "code": "TS1110",
+          "message": "Type expected."
+        },
+        {
+          "file": "src/hooks/useResponsive.ts",
+          "line": 139,
+          "column": 4,
+          "severity": "error",
+          "code": "TS1109",
+          "message": "Expression expected."
+        },
+        {
+          "file": "src/hooks/useResponsive.ts",
+          "line": 140,
+          "column": 2,
+          "severity": "error",
+          "code": "TS1109",
+          "message": "Expression expected."
+        },
+        {
+          "file": "src/hooks/useResponsive.ts",
+          "line": 140,
+          "column": 3,
+          "severity": "error",
+          "code": "TS1161",
+          "message": "Unterminated regular expression literal."
+        }
+      ],
+      "root_cause": "TypeScript parser is incorrectly parsing JSX code inside JSDoc comments (lines 133-140). The JSDoc example contains JSX with style={{...}} and {/* Comment */} which TypeScript is treating as actual code instead of documentation."
+    },
+    "eslint": {
+      "target": "linting",
+      "status": "FAIL",
+      "duration": "~3s",
+      "summary": {
+        "errors": 60,
+        "warnings": 9,
+        "files_checked": 145,
+        "files_with_issues": 27
+      },
+      "top_issues": [
+        {
+          "rule": "@typescript-eslint/no-explicit-any",
+          "count": 41,
+          "severity": "error",
+          "description": "Use of 'any' type - should use specific types"
+        },
+        {
+          "rule": "@typescript-eslint/no-unused-vars",
+          "count": 18,
+          "severity": "error",
+          "description": "Unused variables, parameters, or imports"
+        },
+        {
+          "rule": "react-refresh/only-export-components",
+          "count": 9,
+          "severity": "warning",
+          "description": "Fast Refresh only works with components exported as default or named exports"
+        }
+      ],
+      "sample_errors": [
+        {
+          "file": "src/atoms/calculatorSummaryAtom.ts",
+          "line": 30,
+          "column": 14,
+          "rule": "@typescript-eslint/no-explicit-any",
+          "message": "Unexpected any. Specify a different type."
+        },
+        {
+          "file": "src/atoms/language.ts",
+          "line": 34,
+          "column": 9,
+          "rule": "@typescript-eslint/no-unused-vars",
+          "message": "'_set' is defined but never used."
+        },
+        {
+          "file": "src/components/Calculator/OptionGroup.tsx",
+          "line": 10,
+          "column": 10,
+          "rule": "@typescript-eslint/no-explicit-any",
+          "message": "Unexpected any. Specify a different type."
+        }
+      ]
+    }
+  },
+  "overall_status": "FAIL",
+  "summary": {
+    "total_files_checked": 145,
+    "total_errors": 66,
+    "total_warnings": 9,
+    "blocking_issues": 6
+  },
+  "recommendations": [
+    "Fix JSDoc comment in src/hooks/useResponsive.ts (lines 133-140) - either escape JSX properly or remove JSX from documentation",
+    "Replace 41 instances of 'any' type with proper TypeScript types for better type safety",
+    "Remove 18 unused variables and imports to clean up code",
+    "Review React Refresh warnings for proper component export patterns"
+  ]
+}

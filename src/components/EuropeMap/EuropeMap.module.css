@@ -1,0 +1,170 @@
+/* EuropeMap - Wrapper and jvectormap styles */
+
+/* Main wrapper - MUST have explicit height for jvectormap to work */
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 200px);
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a365d 0%, #2d3748 50%, #1a202c 100%);
+}
+
+/* Force jvectormap container to fill wrapper */
+.mapWrapper > div {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: inherit !important;
+}
+
+.mapWrapper :global(.jvectormap-container) {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: inherit !important;
+}
+
+.mapWrapper :global(.jvectormap-container) svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Override jvectormap default zoom button styles */
+.mapWrapper :global(.jvectormap-zoomin),
+.mapWrapper :global(.jvectormap-zoomout) {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.mapWrapper :global(.jvectormap-zoomin) {
+  top: 20px;
+  right: 20px;
+}
+
+.mapWrapper :global(.jvectormap-zoomout) {
+  top: 68px;
+  right: 20px;
+}
+
+.mapWrapper :global(.jvectormap-zoomin:hover),
+.mapWrapper :global(.jvectormap-zoomout:hover) {
+  background: rgba(0, 102, 204, 0.95);
+  border-color: rgba(0, 102, 204, 0.5);
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(0, 102, 204, 0.4);
+}
+
+/* Tooltip styles */
+.mapWrapper :global(.jvectormap-tip) {
+  background: rgba(0, 0, 0, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 14px !important;
+  padding: 0 !important;
+  font-family: inherit !important;
+  color: white !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5) !important;
+  z-index: 100 !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .mapWrapper {
+    min-height: calc(100vh - 350px);
+  }
+}
+
+@media (max-width: 600px) {
+  .mapWrapper {
+    min-height: 400px;
+  }
+
+  .mapWrapper :global(.jvectormap-zoomin),
+  .mapWrapper :global(.jvectormap-zoomout) {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .mapWrapper :global(.jvectormap-zoomin) {
+    top: 12px;
+    right: 12px;
+  }
+
+  .mapWrapper :global(.jvectormap-zoomout) {
+    top: 54px;
+    right: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mapWrapper {
+    min-height: calc(100vh - 180px);
+  }
+}
+
+@media (min-width: 1600px) {
+  .mapWrapper {
+    min-height: calc(100vh - 160px);
+  }
+}
+
+@media (min-width: 2000px) {
+  .mapWrapper {
+    min-height: calc(100vh - 140px);
+  }
+}
+
+/* Light theme */
+[data-theme="light"] .mapWrapper {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 50%, #a0aec0 100%);
+}
+
+[data-theme="light"] .mapWrapper :global(.jvectormap-zoomin),
+[data-theme="light"] .mapWrapper :global(.jvectormap-zoomout) {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a202c;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .mapWrapper :global(.jvectormap-zoomin:hover),
+[data-theme="light"] .mapWrapper :global(.jvectormap-zoomout:hover) {
+  background: rgba(0, 102, 204, 0.95);
+  color: white;
+}
+
+[data-theme="light"] .mapWrapper :global(.jvectormap-tip) {
+  background: rgba(255, 255, 255, 0.98) !important;
+  color: #1a202c !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Dark theme */
+[data-theme="dark"] .mapWrapper {
+  background: linear-gradient(135deg, #0d1421 0%, #1a202c 50%, #171923 100%);
+}
+
+/* Disable hover effects on touch devices */
+@media (pointer: coarse), (hover: none) {
+  .mapWrapper :global(.jvectormap-tip) {
+    display: none !important;
+  }
+
+  .mapWrapper :global(.jvectormap-zoomin:hover),
+  .mapWrapper :global(.jvectormap-zoomout:hover) {
+    transform: none;
+    box-shadow: none;
+  }
+}

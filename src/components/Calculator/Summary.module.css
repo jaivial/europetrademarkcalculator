@@ -1,0 +1,532 @@
+/* src/components/Calculator/Summary.module.css */
+
+/* Main Summary Container */
+.summaryContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--bg-surface, #ffffff);
+  border: 1px solid var(--border-color, #e5e7eb);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Summary Header */
+.summaryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color, #3b82f6);
+  padding-bottom: 0.75rem;
+}
+
+.summaryTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary, #1f2937);
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+/* Summary Content Grid */
+.summaryContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/* Summary Card Styles */
+.summaryCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--bg-secondary, #f9fafb);
+  border: 1px solid var(--border-color, #e5e7eb);
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.summaryCard:hover {
+  border-color: var(--primary-color, #3b82f6);
+  background: var(--bg-hover, #f3f4f6);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.1);
+}
+
+.summaryCardHighlighted {
+  background: linear-gradient(
+    135deg,
+    var(--primary-light, #dbeafe) 0%,
+    var(--primary-lighter, #eff6ff) 100%
+  );
+  border: 2px solid var(--primary-color, #3b82f6);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  font-weight: 600;
+}
+
+.summaryCardHighlighted:hover {
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.25);
+}
+
+/* Card Icon */
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--icon-bg, #e5e7eb);
+  flex-shrink: 0;
+}
+
+.iconSymbol {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Card Content */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.cardLabel {
+  display: flex;
+  align-items: center;
+}
+
+.labelText {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary, #6b7280);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cardValue {
+  display: flex;
+  align-items: center;
+}
+
+.valueText {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary, #1f2937);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Highlight Badge */
+.highlightBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--success-color, #10b981);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Price Card Special Styling */
+.priceCard {
+  grid-column: 1 / -1;
+  min-height: 80px;
+}
+
+/* CTA Section */
+.ctaSection {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color, #e5e7eb);
+  width: 100%;
+}
+
+.proceedButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color, #3b82f6) 0%,
+    var(--primary-dark, #1e40af) 100%
+  );
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-height: 44px;
+  min-width: 200px;
+}
+
+.proceedButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
+}
+
+.proceedButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.proceedButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.proceedButtonText {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.proceedButtonArrow {
+  font-size: 1.25rem;
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+}
+
+.proceedButton:hover .proceedButtonArrow {
+  transform: translateX(4px);
+}
+
+/* Summary Footer */
+.summaryFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--border-light, #f3f4f6);
+}
+
+.summaryDisclaimer {
+  font-size: 0.75rem;
+  color: var(--text-muted, #9ca3af);
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ======================== MOBILE BREAKPOINT ======================== */
+/* Extra Small Devices (200px - 480px) */
+@media (max-width: 480px) {
+  .summaryContainer {
+    padding: 0.75rem;
+    gap: 0.75rem;
+    border-radius: 8px;
+  }
+
+  .summaryTitle {
+    font-size: 1.125rem;
+  }
+
+  .summaryContent {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .summaryCard {
+    padding: 0.875rem;
+    gap: 0.75rem;
+  }
+
+  .cardIcon {
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .iconSymbol {
+    font-size: 1.25rem;
+  }
+
+  .valueText {
+    font-size: 1rem;
+  }
+
+  .labelText {
+    font-size: 0.75rem;
+  }
+
+  .proceedButton {
+    width: 100%;
+    min-width: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .proceedButtonText {
+    font-size: 0.95rem;
+  }
+
+  .ctaSection {
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+  }
+
+  .priceCard {
+    grid-column: 1 / -1;
+    min-height: 70px;
+  }
+
+  .highlightBadge {
+    width: 28px;
+    height: 28px;
+    top: -6px;
+    right: -6px;
+    font-size: 1.1rem;
+  }
+}
+
+/* ======================== TABLET BREAKPOINT ======================== */
+/* Small Devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .summaryContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.875rem;
+  }
+
+  .summaryCard {
+    padding: 0.875rem;
+  }
+
+  .proceedButton {
+    min-width: 220px;
+    padding: 0.875rem 1.75rem;
+  }
+
+  .priceCard {
+    grid-column: 1 / -1;
+    min-height: 75px;
+  }
+}
+
+/* ======================== TABLET LANDSCAPE ======================== */
+/* Medium Devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .summaryContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .priceCard {
+    grid-column: 1 / -1;
+  }
+
+  .summaryCard {
+    padding: 1rem;
+  }
+}
+
+/* ======================== DESKTOP BREAKPOINT ======================== */
+/* Large Devices (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .summaryContent {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .priceCard {
+    grid-column: 1 / -1;
+  }
+
+  .proceedButton {
+    min-width: 240px;
+    padding: 1rem 2.25rem;
+  }
+}
+
+/* ======================== LARGE DESKTOP ======================== */
+/* Extra Large Devices (1441px - 2560px) */
+@media (min-width: 1441px) and (max-width: 2560px) {
+  .summaryContainer {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .summaryContent {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .summaryCard {
+    padding: 1.25rem;
+  }
+
+  .summaryTitle {
+    font-size: 1.5rem;
+  }
+
+  .valueText {
+    font-size: 1.25rem;
+  }
+
+  .proceedButton {
+    min-width: 280px;
+    padding: 1rem 2.5rem;
+    font-size: 1.05rem;
+  }
+
+  .priceCard {
+    grid-column: 1 / -1;
+    min-height: 100px;
+  }
+}
+
+/* ======================== ULTRA LARGE DEVICES ======================== */
+/* 4K and Beyond (2561px - 3000px) */
+@media (min-width: 2561px) {
+  .summaryContainer {
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .summaryContent {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+
+  .summaryCard {
+    padding: 1.5rem;
+    min-height: 140px;
+  }
+
+  .summaryTitle {
+    font-size: 1.75rem;
+  }
+
+  .valueText {
+    font-size: 1.5rem;
+  }
+
+  .cardIcon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .iconSymbol {
+    font-size: 2rem;
+  }
+
+  .proceedButton {
+    min-width: 320px;
+    padding: 1.25rem 3rem;
+    font-size: 1.15rem;
+    min-height: 52px;
+  }
+
+  .proceedButtonArrow {
+    font-size: 1.5rem;
+  }
+
+  .priceCard {
+    grid-column: 1 / -1;
+    min-height: 150px;
+  }
+
+  .labelText {
+    font-size: 0.95rem;
+  }
+}
+
+/* ======================== ACCESSIBILITY ======================== */
+@media (prefers-reduced-motion: reduce) {
+  .summaryContainer,
+  .summaryCard,
+  .proceedButton,
+  .summaryCard:hover,
+  .proceedButton:hover {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+  .summaryCard {
+    border-width: 2px;
+  }
+
+  .proceedButton {
+    border: 2px solid var(--text-primary, #1f2937);
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .summaryContainer {
+    background: var(--bg-surface-dark, #1f2937);
+    border-color: var(--border-dark, #374151);
+  }
+
+  .summaryCard {
+    background: var(--bg-secondary-dark, #111827);
+    border-color: var(--border-dark, #374151);
+  }
+
+  .summaryCard:hover {
+    background: var(--bg-hover-dark, #1f2937);
+  }
+
+  .valueText {
+    color: var(--text-primary-dark, #f3f4f6);
+  }
+
+  .labelText {
+    color: var(--text-secondary-dark, #9ca3af);
+  }
+
+  .summaryCardHighlighted {
+    background: linear-gradient(
+      135deg,
+      var(--primary-dark-light, #1e3a8a) 0%,
+      var(--primary-dark, #1e40af) 100%
+    );
+  }
+}

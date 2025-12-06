@@ -1,0 +1,352 @@
+{
+  "navigation": {
+    "worldMap": "Världskarta",
+    "countryList": "Länderlista"
+  },
+
+  "common": {
+    "appTitle": "Märkesregistreringskalkylator",
+    "appDescription": "Beräkna märkesregistreringskostnader i europeiska länder",
+    "language": "Språk",
+    "country": "Land",
+    "currency": "EUR",
+    "loading": "Läser in...",
+    "error": "Ett fel har inträffat",
+    "success": "Lyckades",
+    "cancel": "Avbryt",
+    "confirm": "Bekräfta",
+    "close": "Stäng",
+    "back": "Tillbaka",
+    "next": "Nästa",
+    "save": "Spara",
+    "delete": "Ta bort",
+    "edit": "Redigera",
+    "search": "Sök",
+    "clear": "Rensa",
+    "reset": "Återställ",
+    "noResults": "Inga resultat hittades"
+  },
+  "navigation": {
+    "worldMap": "Världskarta",
+    "countryList": "Länderlista",
+    "calculator": "Miniräknare",
+    "about": "Om oss",
+    "contact": "Kontakt",
+    "help": "Hjälp"
+  },
+  "theme": {
+    "dark": "Mörk",
+    "light": "Ljus",
+    "system": "System",
+    "toggleTheme": "Växla design"
+  },
+  "calculator": {
+    "title": "Märkesregistreringskalkylator",
+    "subtitle": "Beräkna dina registreringskostnader",
+    "numberOfClasses": "Antal klasser",
+    "classesLabel": "Klasser",
+    "registrationType": "Registreringstyp",
+    "standard": "Standard",
+    "express": "Express",
+    "priority": "Prioritet",
+    "optionalServices": "Valfria tjänster",
+    "monitoring": "Övervakning",
+    "legalSupport": "Juridisk support",
+    "fastTrack": "Snabbspår",
+    "basePrice": "Baspris",
+    "servicesPrice": "Serviceavgifter",
+    "totalPrice": "Totalpris",
+    "calculate": "Beräkna",
+    "resetCalculator": "Återställ",
+    "priceEstimate": "Uppskattade kostnader",
+    "perClass": "per klass",
+    "savings": "Besparingar"
+  },
+  "globe": {
+    "title": "Världskarta",
+    "selectCountry": "Välj ett land",
+    "rotating": "Automatisk rotation",
+    "stopRotation": "Stoppa rotation",
+    "startRotation": "Starta rotation",
+    "zoom": "Zoom",
+    "zoomIn": "Zooma in",
+    "zoomOut": "Zooma ut",
+    "resetView": "Återställ vy",
+    "noCountrySelected": "Inget land valt",
+    "selectToCalculate": "Välj ett land för att börja"
+  },
+  "countryList": {
+    "title": "Länderlista",
+    "searchPlaceholder": "Sök efter ett land...",
+    "filter": "Filtrera",
+    "continent": "Kontinent",
+    "europe": "Europa",
+    "asia": "Asien",
+    "africa": "Afrika",
+    "americas": "Amerika",
+    "oceania": "Oceanien",
+    "all": "Alla",
+    "countries": "Länder",
+    "selectedCountries": "Valda länder",
+    "noCountries": "Inga länder hittades",
+    "clearSelection": "Rensa val"
+  },
+  "pricing": {
+    "title": "Prissättning",
+    "basePrice": "Baspris",
+    "additionalServices": "Valfria tjänster",
+    "currency": "EUR",
+    "estimatedCost": "Uppskattade kostnader",
+    "finalPrice": "Slutpris",
+    "discounts": "Rabatter",
+    "vatNotIncluded": "Moms ej inkluderad",
+    "priceBreakdown": "Kostnadsbeskrivning"
+  },
+  "validation": {
+    "required": "Det här fältet är obligatoriskt",
+    "invalidInput": "Ogiltig inmatning",
+    "minValue": "Minimivärde: {value}",
+    "maxValue": "Maximivärde: {value}",
+    "selectCountry": "Vänligen välj ett land",
+    "selectAtLeastOne": "Vänligen välj minst ett objekt"
+  },
+  "footer": {
+    "product": {
+      "title": "Produkt",
+      "home": "Hem",
+      "calculator": "Kalkylator",
+      "features": "Funktioner",
+      "pricing": "Prissattning"
+    },
+    "company": {
+      "title": "Foretag",
+      "about": "Om Oss",
+      "blog": "Blogg",
+      "contact": "Kontakt",
+      "careers": "Karriar"
+    },
+    "legal": {
+      "title": "Juridiskt",
+      "privacy": "Integritetspolicy",
+      "terms": "Anvandarvillkor",
+      "cookies": "Cookiepolicy",
+      "compliance": "Efterlevnad"
+    },
+    "copyright": {
+      "text": "{{year}} Brand Calculator. Alla rattigheter forbehallna."
+    },
+    "branding": {
+      "description": "Berakna markesregistreringskostnader i europeiska lander"
+    },
+    "social": {
+      "twitter": "Folj oss pa Twitter",
+      "linkedin": "Anslut pa LinkedIn",
+      "github": "Visa pa GitHub",
+      "email": "Maila oss"
+    },
+    "version": {
+      "label": "Version",
+      "number": "1.0.0"
+    }
+  },
+
+  "legal": {
+    "backToHome": "Tillbaka till startsidan",
+    "lastUpdated": "Senast uppdaterad: december 2024",
+    "createdBy": "Skapat med kärlek av",
+
+    "privacy": {
+      "title": "Integritetspolicy",
+      "introduction": "1. Introduktion",
+      "introText1": "Välkommen till Märkesregistreringskalkylatorn. Denna integritetspolicy förklarar hur vi hanterar information när du använder vår webbplats och tjänster.",
+      "importantNotice": "Viktigt meddelande:",
+      "introText2": "Detta är ett utbildningsprojekt utan vinstsyfte skapat av Jaime Villanueva Acon via Jaime Digital Studio endast för självstudier och samhällsnytta. Vi samlar inte in, lagrar eller bearbetar några personuppgifter.",
+      "noCollect": "2. Information vi INTE samlar in",
+      "noCollectText": "Denna webbplats är utformad med integritet som kärnprincip. Vi:",
+      "noCollectList": {
+        "0": "Samlar inte in personlig information (namn, e-post, telefonnummer)",
+        "1": "Spårar inte ditt surfbeteende",
+        "2": "Använder inte analys- eller spårningstjänster",
+        "3": "Lagrar inte cookies för spårningsändamål",
+        "4": "Delar inte data med tredje parter",
+        "5": "Skapar inte användarkonton eller profiler",
+        "6": "Bearbetar inte betalningsinformation"
+      },
+      "localStorage": "3. Lokal lagring",
+      "localStorageText": "Vi kan använda din webbläsares lokala lagring endast för:",
+      "localStorageList": {
+        "0": "Att spara din språkinställning",
+        "1": "Att lagra din temainställning (ljust/mörkt läge)"
+      },
+      "localStorageNote": "Dessa data lämnar aldrig din enhet och överförs inte till någon server.",
+      "thirdParty": "4. Tredjepartstjänster",
+      "thirdPartyText": "Vår webbplats kan innehålla länkar till externa webbplatser (LinkedIn, GitHub, Instagram, portfolio). När du klickar på dessa länkar lämnar du vår webbplats och omfattas av dessa externa webbplatsers integritetspolicyer.",
+      "educational": "5. Utbildningssyfte",
+      "educationalText": "Detta projekt skapades helt för utbildnings- och självstudiersyften. Det är:",
+      "educationalList": {
+        "0": "Icke-kommersiellt och utan vinstsyfte",
+        "1": "Öppet för samhällsinlärning",
+        "2": "En demonstration av webbutvecklingsfärdigheter",
+        "3": "Inte avsett för faktiska varumärkesregistreringstjänster"
+      },
+      "children": "6. Barns integritet",
+      "childrenText": "Vår webbplats samlar medvetet inte in någon information från någon, inklusive barn under 13 år.",
+      "changes": "7. Ändringar i denna policy",
+      "changesText": "Vi kan uppdatera denna integritetspolicy från tid till annan. Eventuella ändringar kommer att publiceras på denna sida med ett uppdaterat datum.",
+      "contact": "8. Kontakt",
+      "contactText": "Om du har frågor om denna integritetspolicy kan du kontakta oss via:"
+    },
+
+    "terms": {
+      "title": "Användarvillkor",
+      "agreement": "1. Godkännande av villkor",
+      "agreementText": "Genom att besöka Märkesregistreringskalkylatorn webbplats godkänner du att vara bunden av dessa användarvillkor. Om du inte samtycker till någon del av dessa villkor, vänligen använd inte vår webbplats.",
+      "disclaimer": "2. Ansvarsfriskrivning för utbildningssyfte",
+      "disclaimerNote": "Detta är INTE en kommersiell tjänst.",
+      "disclaimerText": "Märkesregistreringskalkylatorn är ett utbildningsprojekt skapat av Jaime Villanueva Acon via Jaime Digital Studio för följande syften:",
+      "disclaimerList": {
+        "0": "Självstudier och kompetensutveckling",
+        "1": "Demonstration av webbutvecklingsförmågor",
+        "2": "Bidrag till open source-gemenskapen",
+        "3": "Hjälpa andra att lära sig om webbteknologier"
+      },
+      "disclaimerNonProfit": "Detta projekt är helt ideellt och altruistiskt.",
+      "noServices": "3. Inga professionella tjänster",
+      "important": "Viktigt:",
+      "noServicesText": "Denna webbplats tillhandahåller INTE:",
+      "noServicesList": {
+        "0": "Faktiska varumärkesregistreringstjänster",
+        "1": "Juridisk rådgivning eller konsultation",
+        "2": "Officiella priser för varumärkesregistrering",
+        "3": "Garantier om varumärkesgodkännande",
+        "4": "Någon form av kommersiell tjänst"
+      },
+      "noServicesNote": "All visad prisinformation är endast för demonstrationsändamål och kanske inte återspeglar verkliga kostnader. För verklig varumärkesregistrering, konsultera officiella varumärkesmyndigheter och kvalificerade jurister.",
+      "use": "4. Användning av webbplatsen",
+      "useText": "Du samtycker till att använda denna webbplats endast för:",
+      "useList": {
+        "0": "Utbildnings- och informationssyften",
+        "1": "Att lära sig om varumärkesregistreringskoncept",
+        "2": "Att utforska webbutvecklingstekniker"
+      },
+      "notUse": "Du samtycker till att INTE:",
+      "notUseList": {
+        "0": "Framställa detta som en officiell varumärkestjänst",
+        "1": "Använda informationen för affärsbeslut utan professionell verifiering",
+        "2": "Försöka äventyra webbplatsens säkerhet",
+        "3": "Kopiera eller distribuera innehållet för kommersiella syften"
+      },
+      "ip": "5. Immateriella rättigheter",
+      "ipText": "Detta projekt skapades av Jaime Villanueva Acon / Jaime Digital Studio. Koden och designen är för utbildningsdemonstration. Om du vill använda någon del av detta projekt:",
+      "ipList": {
+        "0": "Vänligen ge lämplig erkännande",
+        "1": "Använd det endast för icke-kommersiella syften",
+        "2": "Framställ det inte som ditt eget originalarbete"
+      },
+      "warranty": "6. Garantifriskrivning",
+      "warrantyText": "Denna webbplats tillhandahålls 'som den är' utan några garantier, uttryckliga eller underförstådda. Vi garanterar inte:",
+      "warrantyList": {
+        "0": "Noggrannheten i prisuppskattningar",
+        "1": "Fullständigheten av information",
+        "2": "Webbplatsens tillgänglighet",
+        "3": "Lämpligheten för ett visst ändamål"
+      },
+      "liability": "7. Ansvarsbegränsning",
+      "liabilityText": "Under inga omständigheter ska Jaime Villanueva Acon eller Jaime Digital Studio hållas ansvariga för skador som uppstår från användningen av denna utbildningswebbplats. Detta inkluderar, men är inte begränsat till:",
+      "liabilityList": {
+        "0": "Beslut fattade baserat på tillhandahållen information",
+        "1": "Förlust av data eller affärsavbrott",
+        "2": "Direkta, indirekta eller följdskador"
+      },
+      "external": "8. Externa länkar",
+      "externalText": "Vår webbplats innehåller länkar till externa webbplatser. Vi ansvarar inte för innehållet, integritetspraxis eller användarvillkor för externa webbplatser.",
+      "changesTerms": "9. Ändringar av villkor",
+      "changesTermsText": "Vi förbehåller oss rätten att ändra dessa villkor när som helst. Ändringar träder i kraft omedelbart efter publicering på denna sida.",
+      "contact": "10. Kontakt",
+      "contactText": "För frågor om dessa användarvillkor, vänligen kontakta:"
+    },
+
+    "cookies": {
+      "title": "Cookiepolicy",
+      "about": "1. Om denna policy",
+      "aboutText": "Denna cookiepolicy förklarar hur Märkesregistreringskalkylatorn, ett utbildningsprojekt av Jaime Villanueva Acon / Jaime Digital Studio, använder cookies och liknande teknologier.",
+      "shortVersion": "Kort version:",
+      "aboutShort": "Vi använder minimal lokal lagring endast för väsentliga funktioner. Vi använder INTE spårningscookies eller analys.",
+      "whatAre": "2. Vad är cookies?",
+      "whatAreText": "Cookies är små textfiler som lagras på din enhet när du besöker webbplatser. De används vanligtvis för:",
+      "whatAreList": {
+        "0": "Att komma ihåg dina inställningar",
+        "1": "Att hålla dig inloggad",
+        "2": "Att spåra webbplatsanvändning (analys)",
+        "3": "Att visa riktade annonser"
+      },
+      "privacyFirst": "3. Vårt tillvägagångssätt: Integritet först",
+      "privacyFirstText": "Som ett ideellt utbildningsprojekt prioriterar vi din integritet. Vi använder INTE:",
+      "trackingCookies": "Spårningscookies",
+      "trackingCookiesDesc": "Vi övervakar inte ditt beteende",
+      "analyticsCookies": "Analyscookies",
+      "analyticsCookiesDesc": "Ingen Google Analytics eller liknande tjänster",
+      "advertisingCookies": "Annonscookies",
+      "advertisingCookiesDesc": "Inga annonser, ingen annonsspårning",
+      "thirdPartyCookies": "Tredjepartscookies",
+      "thirdPartyCookiesDesc": "Ingen extern spårning",
+      "socialMediaCookies": "Sociala medier-cookies",
+      "socialMediaCookiesDesc": "Länkar bäddar inte in spårare",
+      "whatWeUse": "4. Vad vi använder: Lokal lagring",
+      "whatWeUseText": "Vi använder webbläsarens lokala lagring (inte cookies) för två viktiga ändamål:",
+      "languagePref": "Språkinställning",
+      "themePref": "Temainställning",
+      "key": "Nyckel",
+      "purpose": "Syfte",
+      "duration": "Varaktighet",
+      "dataStored": "Lagrad data",
+      "languagePurpose": "Komma ihåg ditt föredragna språk",
+      "themePurpose": "Komma ihåg ljust/mörkt läge-inställning",
+      "untilCleared": "Tills du rensar webbläsardata",
+      "languageCode": "Språkkod (t.ex. 'sv', 'en')",
+      "themeValue": "'light' eller 'dark'",
+      "differences": "5. Viktiga skillnader: Cookies vs Lokal lagring",
+      "feature": "Funktion",
+      "cookiesColumn": "Cookies",
+      "localStorageColumn": "Lokal lagring",
+      "sentToServer": "Skickas till server",
+      "yesEveryRequest": "Ja, med varje förfrågan",
+      "noStaysOnDevice": "Nej, stannar på enheten",
+      "accessedByOthers": "Tillgänglig för andra webbplatser",
+      "sometimesThirdParty": "Ibland (tredje part)",
+      "no": "Nej",
+      "usedForTracking": "Används för spårning",
+      "often": "Ofta",
+      "rarely": "Sällan",
+      "whyLocalStorage": "Vi valde lokal lagring eftersom dina inställningar aldrig lämnar din enhet.",
+      "managing": "6. Hantera dina data",
+      "managingText": "Du kan radera lokal lagringsdata när som helst:",
+      "chromeInstructions": "Inställningar → Sekretess → Rensa webbläsardata → Webbplatsdata",
+      "firefoxInstructions": "Inställningar → Sekretess → Rensa data",
+      "safariInstructions": "Inställningar → Sekretess → Hantera webbplatsdata",
+      "edgeInstructions": "Inställningar → Sekretess → Rensa webbläsardata",
+      "clearingNote": "Att rensa dessa data återställer dina språk- och temainställningar till standardvärdena.",
+      "externalLinks": "7. Externa länkar",
+      "externalLinksText": "Vår sidfot innehåller länkar till:",
+      "portfolio": "portfolio",
+      "externalLinksNote": "Dessa externa webbplatser har sina egna cookiepolicyer. Vi rekommenderar att du granskar dem när du besöker.",
+      "updates": "8. Uppdateringar av denna policy",
+      "updatesText": "Vi kan uppdatera denna policy om vi ändrar hur vi hanterar data. Datumet 'Senast uppdaterad' överst kommer att återspegla eventuella ändringar.",
+      "contact": "9. Kontakt",
+      "contactText": "Frågor om denna cookiepolicy? Kontakta oss på:"
+    }
+  },
+
+  "messages": {
+    "success": "Åtgärden lyckades",
+    "error": "Ett fel har inträffat",
+    "warning": "Varning",
+    "info": "Information",
+    "noData": "Ingen data tillgänglig",
+    "tryAgain": "Försök igen",
+    "loading": "Läser in, vänligen vänta...",
+    "saved": "Sparad",
+    "deleted": "Raderad",
+    "updated": "Uppdaterad"
+  }
+}

@@ -1,0 +1,208 @@
+/* Tab Navigation - Centered Premium Design */
+
+.tabNavigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 1rem 0;
+  background: transparent;
+}
+
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.tabButtonGroup {
+  display: flex;
+  gap: 0;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  width: 100%;
+}
+
+/* Tab Button Base */
+.tabButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  color: var(--text-secondary, #666666);
+  font-family: inherit;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  outline: none;
+  white-space: nowrap;
+}
+
+.tabButton:hover:not(:disabled) {
+  color: var(--text-primary, #333333);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.tabButton:focus-visible {
+  outline: 2px solid var(--primary-color, #0066cc);
+  outline-offset: 2px;
+}
+
+.tabButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Active Tab Button */
+.tabButtonActive {
+  background: white;
+  color: var(--primary-color, #0066cc);
+  font-weight: 600;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.tabButtonActive:hover {
+  background: white;
+}
+
+/* Tab Icon */
+.tabIcon {
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+
+/* Hide indicator - not needed with pill design */
+.tabIndicator {
+  display: none;
+}
+
+/* Dark Theme */
+[data-theme="dark"] .tabButtonGroup {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .tabButton {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .tabButton:hover:not(:disabled) {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .tabButtonActive {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .tabButtonActive:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* Responsive - Small screens */
+@media (max-width: 480px) {
+  .tabNavigation {
+    padding: 0.75rem 0.75rem 0;
+  }
+
+  .tabButtonGroup {
+    padding: 4px;
+    border-radius: 12px;
+  }
+
+  .tabButton {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    gap: 6px;
+  }
+
+  .tabIcon {
+    font-size: 1em;
+  }
+}
+
+/* Responsive - Very small screens */
+@media (max-width: 320px) {
+  .tabButton {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Responsive - Large screens */
+@media (min-width: 768px) {
+  .tabContainer {
+    max-width: 400px;
+  }
+
+  .tabButton {
+    padding: 14px 28px;
+  }
+}
+
+/* Tab Content Styles */
+.tabContent {
+  display: none;
+  width: 100%;
+  opacity: 0;
+}
+
+.tabContentActive {
+  display: block;
+  opacity: 1;
+  animation: fadeInSmooth 450ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tabContentInner {
+  animation: slideInSmooth 450ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeInSmooth {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .tabButton,
+  .tabContentActive,
+  .tabContentInner {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* Print */
+@media print {
+  .tabNavigation {
+    display: none;
+  }
+}

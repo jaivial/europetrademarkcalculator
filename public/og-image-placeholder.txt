@@ -1,0 +1,25 @@
+OG Image Placeholder Information
+================================
+
+The file 'og-image.png' should be placed in this public directory for social media sharing.
+
+Recommended specifications:
+- Dimensions: 1200 x 630 pixels
+- Format: PNG or JPG
+- File size: Under 1MB
+- Content: Should include:
+  * Brand Calculator logo/name
+  * Tagline: "Calculate Trademark Costs in Europe"
+  * Visual elements related to brand registration/trademarks
+  * Clean, professional design
+  * High contrast text for readability
+
+Current reference in index.html:
+- Open Graph: https://brand-calculator.jaimedigitalstudio.com/og-image.png
+- Twitter Card: https://brand-calculator.jaimedigitalstudio.com/og-image.png
+
+To create the image:
+1. Design a 1200x630px image
+2. Save as og-image.png
+3. Place in the /public directory
+4. Vite will automatically copy it to the dist folder during build

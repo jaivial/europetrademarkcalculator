@@ -1,0 +1,348 @@
+/* src/components/LanguageSelector/LanguageSelector.module.css */
+
+:root {
+  --language-selector-bg: #ffffff;
+  --language-selector-border: #e5e7eb;
+  --language-selector-hover: #f3f4f6;
+  --language-selector-active: #dbeafe;
+  --language-selector-text: #1f2937;
+  --language-selector-text-light: #6b7280;
+  --language-selector-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --language-selector-transition: all 200ms ease-in-out;
+}
+
+.languageSelectorContainer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Base Button Styles - Mobile First (200px+) */
+.selectorButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--language-selector-text);
+  background-color: var(--language-selector-bg);
+  border: 1px solid var(--language-selector-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--language-selector-transition);
+  width: 100%;
+  min-height: 40px;
+  justify-content: space-between;
+}
+
+.selectorButton:hover {
+  background-color: var(--language-selector-hover);
+  border-color: #d1d5db;
+}
+
+.selectorButton:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.selectorButtonOpen {
+  border-color: #3b82f6;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Chevron Icon */
+.chevron {
+  width: 18px;
+  height: 18px;
+  color: var(--language-selector-text-light);
+  transition: var(--language-selector-transition);
+  flex-shrink: 0;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+  color: #3b82f6;
+}
+
+/* Label */
+.label {
+  display: none;
+  flex: 1;
+  margin-left: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--language-selector-text);
+}
+
+/* Dropdown Menu */
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  background-color: var(--language-selector-bg);
+  border: 1px solid var(--language-selector-border);
+  border-top: none;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: var(--language-selector-shadow);
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+  animation: slideDown 200ms ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownMenuCompact {
+  max-height: 300px;
+}
+
+/* Menu Items */
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--language-selector-text);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--language-selector-transition);
+  justify-content: space-between;
+  text-align: left;
+}
+
+.menuItem:hover {
+  background-color: var(--language-selector-hover);
+}
+
+.menuItem:focus {
+  outline: none;
+  background-color: var(--language-selector-active);
+}
+
+.menuItemActive {
+  background-color: var(--language-selector-active);
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.menuItemLabel {
+  flex: 1;
+  font-size: 14px;
+}
+
+.checkmark {
+  color: #3b82f6;
+  font-weight: bold;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Tablet (640px+) */
+@media (min-width: 640px) {
+  .selectorButton {
+    width: auto;
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
+  .label {
+    display: inline;
+  }
+
+  .dropdownMenu {
+    max-height: 500px;
+  }
+
+  .menuItem {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .selectorButton {
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    min-height: 44px;
+  }
+
+  .selectorButtonOpen {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .dropdownMenu {
+    border-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 10px 0;
+  }
+
+  .menuItem {
+    padding: 14px 16px;
+    font-size: 16px;
+    gap: 14px;
+  }
+
+  .menuItemLabel {
+    font-size: 16px;
+  }
+}
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .selectorButton {
+    padding: 14px 18px;
+    font-size: 17px;
+    min-height: 48px;
+  }
+
+  .dropdownMenu {
+    padding: 12px 0;
+  }
+
+  .menuItem {
+    padding: 16px 18px;
+    font-size: 17px;
+    gap: 16px;
+  }
+
+  .menuItemLabel {
+    font-size: 17px;
+  }
+}
+
+/* Ultra-wide (2560px+) */
+@media (min-width: 2560px) {
+  .selectorButton {
+    padding: 18px 24px;
+    font-size: 20px;
+    min-height: 56px;
+    border-radius: 12px;
+  }
+
+  .selectorButtonOpen {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .dropdownMenu {
+    border-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px 0;
+    max-height: 600px;
+  }
+
+  .chevron {
+    width: 24px;
+    height: 24px;
+  }
+
+  .menuItem {
+    padding: 20px 24px;
+    font-size: 20px;
+    gap: 18px;
+  }
+
+  .menuItemLabel {
+    font-size: 20px;
+  }
+
+  .checkmark {
+    font-size: 24px;
+  }
+}
+
+/* Very Small (200px - 640px) mobile optimizations */
+@media (max-width: 639px) {
+  .selectorButton {
+    gap: 6px;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .chevron {
+    width: 16px;
+    height: 16px;
+  }
+
+  .dropdownMenu {
+    padding: 6px 0;
+    max-height: 350px;
+  }
+
+  .menuItem {
+    padding: 8px 10px;
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .menuItemLabel {
+    font-size: 13px;
+  }
+
+  .checkmark {
+    font-size: 16px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .selectorButton,
+  .chevron,
+  .menuItem,
+  .dropdownMenu {
+    transition: none;
+  }
+
+  .dropdownMenu {
+    animation: none;
+  }
+}
+
+/* Dark theme support */
+[data-theme="dark"] {
+  --language-selector-bg: #1e293b;
+  --language-selector-border: #334155;
+  --language-selector-hover: #334155;
+  --language-selector-active: #1e3a8a;
+  --language-selector-text: #f1f5f9;
+  --language-selector-text-light: #cbd5e1;
+  --language-selector-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --language-selector-bg: #1e293b;
+    --language-selector-border: #334155;
+    --language-selector-hover: #334155;
+    --language-selector-active: #1e3a8a;
+    --language-selector-text: #f1f5f9;
+    --language-selector-text-light: #cbd5e1;
+    --language-selector-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+  }
+}

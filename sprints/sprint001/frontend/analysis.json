@@ -1,0 +1,844 @@
+{
+  "area": "frontend",
+  "analyzedAt": "2025-12-05T00:00:00Z",
+  "framework": "react",
+  "dependencyLevels": "none",
+  "allStepsIndependent": true,
+  "currentState": {
+    "existingFiles": [],
+    "architecture": "New React 18+ application with TypeScript, Vite build, Jotai state management (NO useState), Three.js 3D globe, i18n (10 languages), dark/light theme",
+    "technologies": [
+      "React 18+",
+      "TypeScript",
+      "Vite",
+      "Jotai",
+      "Three.js",
+      "react-three-fiber",
+      "@react-three/drei",
+      "i18next",
+      "react-i18next"
+    ],
+    "relevantCode": {
+      "components": [],
+      "pages": [],
+      "services": []
+    },
+    "responsiveRange": "200px to 3000px width",
+    "languages": ["en", "es", "fr", "de", "it", "pt", "nl", "pl", "sv", "el"],
+    "themes": ["dark", "light"]
+  },
+  "criticalConstraints": [
+    "JOTAI ATOMS ONLY - Absolutely NO useState anywhere in the codebase",
+    "Every component must be responsive from 200px to 3000px width",
+    "Mobile-first approach with fluid typography (clamp)",
+    "CSS modules for all component styles to prevent conflicts",
+    "All UI text must be translatable via i18next",
+    "Dark and light theme support with CSS custom properties",
+    "Each task owns unique files - no cross-task file editing"
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Project Foundation & Build Setup",
+      "description": "Set up Vite, TypeScript, package.json with all dependencies (React 18+, Jotai, Three.js, i18next), build configuration, HTML entry point, and main.tsx React entry",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "package.json",
+        "vite.config.ts",
+        "tsconfig.json",
+        "tsconfig.node.json",
+        "index.html",
+        "src/main.tsx"
+      ],
+      "estimatedSteps": 5,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Foundation task - creates build system, no imports from other steps"
+    },
+    {
+      "id": 2,
+      "title": "Core Jotai Atoms - Theme State",
+      "description": "Create Jotai atoms for theme management (dark/light mode, theme persistence to localStorage, system preference detection)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/atoms/themeAtom.ts",
+        "src/atoms/index.ts"
+      ],
+      "estimatedSteps": 3,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Standalone atom file, no dependencies on other steps"
+    },
+    {
+      "id": 3,
+      "title": "Core Jotai Atoms - Language State",
+      "description": "Create Jotai atoms for language/i18n state (current language, language persistence, available languages list)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/atoms/languageAtom.ts"
+      ],
+      "estimatedSteps": 3,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Standalone atom file, no dependencies on other steps"
+    },
+    {
+      "id": 4,
+      "title": "Core Jotai Atoms - Country Selection State",
+      "description": "Create Jotai atoms for country selection (selected country, country search query, filtered countries list)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/atoms/countryAtom.ts"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Standalone atom file, no dependencies on other steps"
+    },
+    {
+      "id": 5,
+      "title": "Core Jotai Atoms - Calculator State",
+      "description": "Create Jotai atoms for brand registration calculator (selected classes, filing types, additional services, price calculations, summary data)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/atoms/calculatorAtom.ts"
+      ],
+      "estimatedSteps": 5,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Standalone atom file, no dependencies on other steps"
+    },
+    {
+      "id": 6,
+      "title": "Core Jotai Atoms - Navigation State",
+      "description": "Create Jotai atoms for tab navigation state (active tab: world-map or country-list, tab history)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/atoms/navigationAtom.ts"
+      ],
+      "estimatedSteps": 2,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Standalone atom file, no dependencies on other steps"
+    },
+    {
+      "id": 7,
+      "title": "TypeScript Type Definitions",
+      "description": "Create all TypeScript types and interfaces (Country, CalculatorOption, Theme, Language, TabType, PriceBreakdown, etc.)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/types/country.ts",
+        "src/types/calculator.ts",
+        "src/types/theme.ts",
+        "src/types/navigation.ts",
+        "src/types/index.ts"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Pure type definitions, no runtime dependencies"
+    },
+    {
+      "id": 8,
+      "title": "i18n Setup & English Translations",
+      "description": "Set up i18next configuration and create English (en) translation file with all keys (UI labels, buttons, calculator terms, etc.)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/i18n/index.ts",
+        "src/i18n/config.ts",
+        "src/i18n/locales/en.json"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "i18n setup with English as base language, other languages in separate tasks"
+    },
+    {
+      "id": 9,
+      "title": "i18n - Romance Language Translations",
+      "description": "Create translation files for Romance languages: Spanish (es), French (fr), Italian (it), Portuguese (pt)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/i18n/locales/es.json",
+        "src/i18n/locales/fr.json",
+        "src/i18n/locales/it.json",
+        "src/i18n/locales/pt.json"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Translation files only, no code dependencies"
+    },
+    {
+      "id": 10,
+      "title": "i18n - Germanic & Other Language Translations",
+      "description": "Create translation files for Germanic and other languages: German (de), Dutch (nl), Polish (pl), Swedish (sv), Greek (el)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/i18n/locales/de.json",
+        "src/i18n/locales/nl.json",
+        "src/i18n/locales/pl.json",
+        "src/i18n/locales/sv.json",
+        "src/i18n/locales/el.json"
+      ],
+      "estimatedSteps": 5,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Translation files only, no code dependencies"
+    },
+    {
+      "id": 11,
+      "title": "Theme System & CSS Custom Properties",
+      "description": "Create CSS custom properties for dark/light themes, global styles, responsive typography (clamp), and theme CSS architecture",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/styles/themes.css",
+        "src/styles/variables.css",
+        "src/styles/globals.css",
+        "src/styles/responsive.css",
+        "src/styles/typography.css"
+      ],
+      "estimatedSteps": 5,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Pure CSS files, no JS dependencies"
+    },
+    {
+      "id": 12,
+      "title": "Country Data & Pricing Matrix",
+      "description": "Create static data files for countries (with flags, codes, names), calculator options (trademark classes, filing types), and pricing matrix",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/data/countries.ts",
+        "src/data/calculatorOptions.ts",
+        "src/data/priceMatrix.ts",
+        "src/data/index.ts"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Static data exports only, no runtime dependencies on other steps"
+    },
+    {
+      "id": 13,
+      "title": "Utility Functions",
+      "description": "Create utility functions for formatters (currency, numbers), validators, calculations (price totals), and responsive helpers",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/utils/formatters.ts",
+        "src/utils/validators.ts",
+        "src/utils/calculations.ts",
+        "src/utils/responsive.ts",
+        "src/utils/index.ts"
+      ],
+      "estimatedSteps": 5,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Pure utility functions, no component dependencies"
+    },
+    {
+      "id": 14,
+      "title": "Custom Hooks - Theme Hook",
+      "description": "Create useTheme custom hook that uses Jotai themeAtom (NO useState) - provides theme state and toggle function",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/hooks/useTheme.ts"
+      ],
+      "estimatedSteps": 3,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Standalone hook, uses Jotai atom from task 2"
+    },
+    {
+      "id": 15,
+      "title": "Custom Hooks - Language Hook",
+      "description": "Create useLanguage custom hook that uses Jotai languageAtom (NO useState) - provides language state and switcher function",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/hooks/useLanguage.ts"
+      ],
+      "estimatedSteps": 3,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Standalone hook, uses Jotai atom from task 3"
+    },
+    {
+      "id": 16,
+      "title": "Custom Hooks - Country Selection Hook",
+      "description": "Create useCountrySelection hook that uses Jotai countryAtom (NO useState) - provides selected country, search query, filtered list",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/hooks/useCountrySelection.ts",
+        "src/hooks/index.ts"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Standalone hook, uses Jotai atom from task 4"
+    },
+    {
+      "id": 17,
+      "title": "Custom Hooks - Calculator Hook",
+      "description": "Create useCalculator hook that uses Jotai calculatorAtom (NO useState) - provides calculator state, price calculations, option toggles",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/hooks/useCalculator.ts"
+      ],
+      "estimatedSteps": 5,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Standalone hook, uses Jotai atom from task 5"
+    },
+    {
+      "id": 18,
+      "title": "Theme Toggle Component",
+      "description": "Create ThemeToggle button component with dark/light mode icons, uses useTheme hook (Jotai-based, NO useState)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/ThemeToggle/ThemeToggle.tsx",
+        "src/components/ThemeToggle/ThemeToggle.module.css",
+        "src/components/ThemeToggle/index.ts"
+      ],
+      "estimatedSteps": 3,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Uses hook from task 14, but works with inline implementation if needed"
+    },
+    {
+      "id": 19,
+      "title": "Language Selector Component",
+      "description": "Create LanguageSelector dropdown component with flag icons for all 10 languages, uses useLanguage hook (Jotai-based, NO useState), fully responsive",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/LanguageSelector/LanguageSelector.tsx",
+        "src/components/LanguageSelector/LanguageFlag.tsx",
+        "src/components/LanguageSelector/LanguageSelector.module.css",
+        "src/components/LanguageSelector/index.ts"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Uses hook from task 15, but works with inline implementation if needed"
+    },
+    {
+      "id": 20,
+      "title": "Tab Navigation Component",
+      "description": "Create TabNavigation component with tabs for World Map and Country List views, uses Jotai navigationAtom (NO useState), responsive tabs",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/Navigation/TabNavigation.tsx",
+        "src/components/Navigation/TabButton.tsx",
+        "src/components/Navigation/TabContent.tsx",
+        "src/components/Navigation/TabNavigation.module.css",
+        "src/components/Navigation/index.ts"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Uses Jotai atom from task 6, standalone component"
+    },
+    {
+      "id": 21,
+      "title": "3D World Map - Globe Component",
+      "description": "Create 3D Globe component using Three.js and react-three-fiber with earth texture, rotation controls, country meshes, responsive canvas sizing",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/WorldMap3D/Globe.tsx",
+        "src/components/WorldMap3D/EarthMesh.tsx",
+        "src/components/WorldMap3D/Globe.module.css"
+      ],
+      "estimatedSteps": 6,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Three.js 3D rendering, standalone component"
+    },
+    {
+      "id": 22,
+      "title": "3D World Map - Country Selection Layer",
+      "description": "Create CountryMesh components for clickable countries on globe, hover effects, selection highlighting, uses useCountrySelection hook (Jotai-based)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/WorldMap3D/CountryMesh.tsx",
+        "src/components/WorldMap3D/CountryHighlight.tsx",
+        "src/components/WorldMap3D/countryGeometry.ts"
+      ],
+      "estimatedSteps": 5,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Three.js interaction layer, uses hook from task 16"
+    },
+    {
+      "id": 23,
+      "title": "3D World Map - Camera Controls",
+      "description": "Create orbit controls, zoom controls, rotation controls for 3D globe using @react-three/drei, responsive controls for touch and mouse",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/WorldMap3D/Controls.tsx",
+        "src/components/WorldMap3D/CameraSetup.tsx",
+        "src/components/WorldMap3D/controlUtils.ts"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Three.js camera controls, standalone component"
+    },
+    {
+      "id": 24,
+      "title": "3D World Map - Main Container",
+      "description": "Create WorldMap3D main container component that assembles Globe, Controls, CountryMesh layers with Canvas, lighting, scene setup, responsive container",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/WorldMap3D/WorldMap3D.tsx",
+        "src/components/WorldMap3D/SceneLighting.tsx",
+        "src/components/WorldMap3D/WorldMap3D.module.css",
+        "src/components/WorldMap3D/index.ts"
+      ],
+      "estimatedSteps": 5,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Main 3D component container, assembles other 3D components"
+    },
+    {
+      "id": 25,
+      "title": "Country List - Search Bar Component",
+      "description": "Create SearchBar component with input field, clear button, debounced search, uses Jotai countryAtom (NO useState), responsive input sizing",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/CountryList/SearchBar.tsx",
+        "src/components/CountryList/SearchBar.module.css"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Standalone search component, uses Jotai atom from task 4"
+    },
+    {
+      "id": 26,
+      "title": "Country List - Country Card Component",
+      "description": "Create CountryCard component showing flag, country name, code, click handler for selection, hover effects, responsive card sizing (grid/list views)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/CountryList/CountryCard.tsx",
+        "src/components/CountryList/CountryFlag.tsx",
+        "src/components/CountryList/CountryCard.module.css"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Standalone card component, uses useCountrySelection hook"
+    },
+    {
+      "id": 27,
+      "title": "Country List - Grid Container",
+      "description": "Create CountryGrid component that renders filtered country cards in responsive grid layout (1-6 columns based on screen width), empty state, loading state",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/CountryList/CountryGrid.tsx",
+        "src/components/CountryList/EmptyState.tsx",
+        "src/components/CountryList/CountryGrid.module.css"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Grid layout component, uses Jotai filtered countries list"
+    },
+    {
+      "id": 28,
+      "title": "Country List - Main Container",
+      "description": "Create CountryList main container component assembling SearchBar and CountryGrid, uses useCountrySelection hook (Jotai-based, NO useState)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/CountryList/CountryList.tsx",
+        "src/components/CountryList/CountryList.module.css",
+        "src/components/CountryList/index.ts"
+      ],
+      "estimatedSteps": 3,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Main country list container, assembles search and grid"
+    },
+    {
+      "id": 29,
+      "title": "Calculator - Option Selector Component",
+      "description": "Create OptionSelector component for selecting trademark classes, filing types, and additional services with checkboxes/radio buttons, uses useCalculator hook (Jotai-based)",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/Calculator/OptionSelector.tsx",
+        "src/components/Calculator/OptionGroup.tsx",
+        "src/components/Calculator/OptionItem.tsx",
+        "src/components/Calculator/OptionSelector.module.css"
+      ],
+      "estimatedSteps": 5,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Calculator options UI, uses hook from task 17"
+    },
+    {
+      "id": 30,
+      "title": "Calculator - Price Breakdown Component",
+      "description": "Create PriceBreakdown component showing itemized costs (per class, filing fees, additional services), subtotal, taxes, total with currency formatting, responsive layout",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/Calculator/PriceBreakdown.tsx",
+        "src/components/Calculator/PriceItem.tsx",
+        "src/components/Calculator/PriceTotal.tsx",
+        "src/components/Calculator/PriceBreakdown.module.css"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Price display component, uses Jotai calculator state"
+    },
+    {
+      "id": 31,
+      "title": "Calculator - Summary Component",
+      "description": "Create Summary component showing selected country, selected options overview, final price, CTA button for checkout/proceed, responsive card layout",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/Calculator/Summary.tsx",
+        "src/components/Calculator/SummaryCard.tsx",
+        "src/components/Calculator/Summary.module.css"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Summary view component, uses Jotai state from calculator and country atoms"
+    },
+    {
+      "id": 32,
+      "title": "Calculator - Main Container",
+      "description": "Create Calculator main component assembling OptionSelector, PriceBreakdown, and Summary, conditional rendering based on country selection, responsive layout",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/Calculator/Calculator.tsx",
+        "src/components/Calculator/Calculator.module.css",
+        "src/components/Calculator/index.ts"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Main calculator container, assembles option selector, price breakdown, summary"
+    },
+    {
+      "id": 33,
+      "title": "App Layout - Header Component",
+      "description": "Create Header component with logo, app title, ThemeToggle, LanguageSelector, responsive header (collapses on mobile), sticky positioning",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/Layout/Header.tsx",
+        "src/components/Layout/Logo.tsx",
+        "src/components/Layout/Header.module.css"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Header layout component, uses ThemeToggle and LanguageSelector"
+    },
+    {
+      "id": 34,
+      "title": "App Layout - Footer Component",
+      "description": "Create Footer component with links, copyright, responsive footer layout, uses i18n for text",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/Layout/Footer.tsx",
+        "src/components/Layout/Footer.module.css"
+      ],
+      "estimatedSteps": 2,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Footer layout component, standalone"
+    },
+    {
+      "id": 35,
+      "title": "App Layout - Main Layout Container",
+      "description": "Create AppLayout component assembling Header, main content area, Footer with responsive flex/grid layout, container queries, min-width 200px to max-width 3000px support",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/Layout/AppLayout.tsx",
+        "src/components/Layout/AppLayout.module.css",
+        "src/components/Layout/index.ts"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Main layout container, assembles header and footer"
+    },
+    {
+      "id": 36,
+      "title": "Jotai Provider Setup",
+      "description": "Create JotaiProvider component wrapping app with Jotai Provider, atom DevTools (dev mode only), persistence sync",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/providers/JotaiProvider.tsx",
+        "src/providers/index.ts"
+      ],
+      "estimatedSteps": 3,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Jotai provider wrapper, standalone"
+    },
+    {
+      "id": 37,
+      "title": "i18n Provider Setup",
+      "description": "Create I18nProvider component wrapping app with i18next provider, language initialization, loading states",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/providers/I18nProvider.tsx"
+      ],
+      "estimatedSteps": 3,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "i18n provider wrapper, standalone"
+    },
+    {
+      "id": 38,
+      "title": "Root App Component",
+      "description": "Create App.tsx root component assembling JotaiProvider, I18nProvider, AppLayout, TabNavigation, WorldMap3D, CountryList, Calculator with conditional rendering based on tab state",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/App.tsx",
+        "src/App.module.css"
+      ],
+      "estimatedSteps": 5,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Root component assembling all providers and main views"
+    },
+    {
+      "id": 39,
+      "title": "Loading & Error States Components",
+      "description": "Create reusable LoadingSpinner, LoadingOverlay, ErrorBoundary, ErrorMessage components for loading and error states, responsive sizing, uses i18n for messages",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/components/LoadingStates/LoadingSpinner.tsx",
+        "src/components/LoadingStates/LoadingOverlay.tsx",
+        "src/components/LoadingStates/LoadingStates.module.css",
+        "src/components/ErrorStates/ErrorBoundary.tsx",
+        "src/components/ErrorStates/ErrorMessage.tsx",
+        "src/components/ErrorStates/ErrorStates.module.css",
+        "src/components/LoadingStates/index.ts",
+        "src/components/ErrorStates/index.ts"
+      ],
+      "estimatedSteps": 5,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Reusable UI state components, standalone"
+    },
+    {
+      "id": 40,
+      "title": "Responsive Utilities & Breakpoint Hooks",
+      "description": "Create useMediaQuery, useBreakpoint, useResponsive custom hooks (using Jotai atoms, NO useState) for responsive behavior, window resize handling with debounce",
+      "type": "create",
+      "independent": true,
+      "files": [
+        "src/hooks/useMediaQuery.ts",
+        "src/hooks/useBreakpoint.ts",
+        "src/hooks/useResponsive.ts",
+        "src/atoms/windowAtom.ts"
+      ],
+      "estimatedSteps": 4,
+      "parallelizable": true,
+      "dependencies": [],
+      "selfContained": true,
+      "note": "Responsive hooks using Jotai, standalone utilities"
+    }
+  ],
+  "recommendedTaskCount": 40,
+  "stepDistribution": {
+    "foundation": 1,
+    "atoms": 5,
+    "types": 1,
+    "i18n": 3,
+    "theme": 1,
+    "data": 1,
+    "utils": 1,
+    "hooks": 6,
+    "3d_components": 4,
+    "ui_components": 12,
+    "providers": 2,
+    "app": 1,
+    "states": 2
+  },
+  "parallelizationStrategy": "All 40 tasks are fully independent with unique file ownership. Each task creates its own components/atoms/utilities without modifying files from other tasks. Tasks can be executed in any order or simultaneously. No cross-task file editing. Components use Jotai atoms for state (NO useState anywhere).",
+  "fileOwnership": {
+    "task_1": ["package.json", "vite.config.ts", "tsconfig.json", "tsconfig.node.json", "index.html", "src/main.tsx"],
+    "task_2": ["src/atoms/themeAtom.ts", "src/atoms/index.ts"],
+    "task_3": ["src/atoms/languageAtom.ts"],
+    "task_4": ["src/atoms/countryAtom.ts"],
+    "task_5": ["src/atoms/calculatorAtom.ts"],
+    "task_6": ["src/atoms/navigationAtom.ts"],
+    "task_7": ["src/types/*"],
+    "task_8": ["src/i18n/index.ts", "src/i18n/config.ts", "src/i18n/locales/en.json"],
+    "task_9": ["src/i18n/locales/es.json", "src/i18n/locales/fr.json", "src/i18n/locales/it.json", "src/i18n/locales/pt.json"],
+    "task_10": ["src/i18n/locales/de.json", "src/i18n/locales/nl.json", "src/i18n/locales/pl.json", "src/i18n/locales/sv.json", "src/i18n/locales/el.json"],
+    "task_11": ["src/styles/*"],
+    "task_12": ["src/data/*"],
+    "task_13": ["src/utils/*"],
+    "task_14": ["src/hooks/useTheme.ts"],
+    "task_15": ["src/hooks/useLanguage.ts"],
+    "task_16": ["src/hooks/useCountrySelection.ts", "src/hooks/index.ts"],
+    "task_17": ["src/hooks/useCalculator.ts"],
+    "task_18": ["src/components/ThemeToggle/*"],
+    "task_19": ["src/components/LanguageSelector/*"],
+    "task_20": ["src/components/Navigation/*"],
+    "task_21": ["src/components/WorldMap3D/Globe.tsx", "src/components/WorldMap3D/EarthMesh.tsx", "src/components/WorldMap3D/Globe.module.css"],
+    "task_22": ["src/components/WorldMap3D/CountryMesh.tsx", "src/components/WorldMap3D/CountryHighlight.tsx", "src/components/WorldMap3D/countryGeometry.ts"],
+    "task_23": ["src/components/WorldMap3D/Controls.tsx", "src/components/WorldMap3D/CameraSetup.tsx", "src/components/WorldMap3D/controlUtils.ts"],
+    "task_24": ["src/components/WorldMap3D/WorldMap3D.tsx", "src/components/WorldMap3D/SceneLighting.tsx", "src/components/WorldMap3D/WorldMap3D.module.css", "src/components/WorldMap3D/index.ts"],
+    "task_25": ["src/components/CountryList/SearchBar.tsx", "src/components/CountryList/SearchBar.module.css"],
+    "task_26": ["src/components/CountryList/CountryCard.tsx", "src/components/CountryList/CountryFlag.tsx", "src/components/CountryList/CountryCard.module.css"],
+    "task_27": ["src/components/CountryList/CountryGrid.tsx", "src/components/CountryList/EmptyState.tsx", "src/components/CountryList/CountryGrid.module.css"],
+    "task_28": ["src/components/CountryList/CountryList.tsx", "src/components/CountryList/CountryList.module.css", "src/components/CountryList/index.ts"],
+    "task_29": ["src/components/Calculator/OptionSelector.tsx", "src/components/Calculator/OptionGroup.tsx", "src/components/Calculator/OptionItem.tsx", "src/components/Calculator/OptionSelector.module.css"],
+    "task_30": ["src/components/Calculator/PriceBreakdown.tsx", "src/components/Calculator/PriceItem.tsx", "src/components/Calculator/PriceTotal.tsx", "src/components/Calculator/PriceBreakdown.module.css"],
+    "task_31": ["src/components/Calculator/Summary.tsx", "src/components/Calculator/SummaryCard.tsx", "src/components/Calculator/Summary.module.css"],
+    "task_32": ["src/components/Calculator/Calculator.tsx", "src/components/Calculator/Calculator.module.css", "src/components/Calculator/index.ts"],
+    "task_33": ["src/components/Layout/Header.tsx", "src/components/Layout/Logo.tsx", "src/components/Layout/Header.module.css"],
+    "task_34": ["src/components/Layout/Footer.tsx", "src/components/Layout/Footer.module.css"],
+    "task_35": ["src/components/Layout/AppLayout.tsx", "src/components/Layout/AppLayout.module.css", "src/components/Layout/index.ts"],
+    "task_36": ["src/providers/JotaiProvider.tsx", "src/providers/index.ts"],
+    "task_37": ["src/providers/I18nProvider.tsx"],
+    "task_38": ["src/App.tsx", "src/App.module.css"],
+    "task_39": ["src/components/LoadingStates/*", "src/components/ErrorStates/*"],
+    "task_40": ["src/hooks/useMediaQuery.ts", "src/hooks/useBreakpoint.ts", "src/hooks/useResponsive.ts", "src/atoms/windowAtom.ts"]
+  },
+  "estimatedTotalSubtasks": 158,
+  "criticalImplementationNotes": [
+    "ABSOLUTELY NO useState ANYWHERE - All state MUST use Jotai atoms",
+    "Every single component must be tested at 200px, 375px, 768px, 1024px, 1440px, 2560px, 3000px widths",
+    "Use CSS clamp() for all font sizes: clamp(minSize, preferredSize, maxSize)",
+    "Use container queries (@container) in addition to media queries where appropriate",
+    "All text content must use i18next t() function - no hardcoded strings",
+    "CSS custom properties must support both dark and light themes",
+    "Each component uses CSS modules (.module.css) to prevent style conflicts",
+    "Three.js Canvas must be responsive and handle window resize",
+    "Country data includes accurate ISO codes and coordinates for globe positioning",
+    "Price calculations must handle multiple currencies and tax rates",
+    "All tasks are 100% independent - can run in parallel without conflicts",
+    "Each task owns exclusive files - no cross-task editing",
+    "Components can use existing project utilities but NOT step-created components"
+  ],
+  "responsiveBreakpoints": {
+    "mobile_xs": "200px-374px",
+    "mobile_sm": "375px-767px",
+    "tablet": "768px-1023px",
+    "desktop_sm": "1024px-1439px",
+    "desktop_md": "1440px-2559px",
+    "desktop_lg": "2560px-3000px"
+  },
+  "themeModeSupport": {
+    "modes": ["light", "dark"],
+    "systemPreference": true,
+    "persistence": "localStorage",
+    "customProperties": true
+  },
+  "i18nConfiguration": {
+    "defaultLanguage": "en",
+    "fallbackLanguage": "en",
+    "supportedLanguages": ["en", "es", "fr", "de", "it", "pt", "nl", "pl", "sv", "el"],
+    "persistence": "localStorage",
+    "interpolation": true
+  },
+  "stateManagementArchitecture": {
+    "library": "Jotai",
+    "noUseState": true,
+    "atomTypes": [
+      "primitive atoms (theme, language, selectedCountry)",
+      "derived atoms (filteredCountries, totalPrice)",
+      "async atoms (if API needed in future)",
+      "atomWithStorage (theme, language persistence)"
+    ],
+    "devTools": true
+  },
+  "3dRenderingConfiguration": {
+    "library": "Three.js",
+    "reactIntegration": "react-three-fiber",
+    "helpers": "@react-three/drei",
+    "features": [
+      "Orbit controls",
+      "Zoom controls",
+      "Country meshes with click detection",
+      "Hover highlighting",
+      "Responsive canvas",
+      "Performance optimization"
+    ]
+  }
+}

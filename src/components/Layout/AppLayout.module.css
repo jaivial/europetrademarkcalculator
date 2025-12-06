@@ -1,0 +1,232 @@
+/* AppLayout.module.css */
+
+/**
+ * Root Layout Container
+ * Flexbox column layout with full viewport height
+ * Supports responsive widths from 200px to 3000px
+ */
+.appLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 200px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--color-background, #ffffff);
+  color: var(--color-text, #000000);
+  transition: all 0.3s ease-in-out;
+}
+
+/**
+ * Header Section
+ * Fixed or sticky header with semantic markup
+ * Scrolls with content by default
+ */
+.header {
+  flex-shrink: 0;
+  width: 100%;
+  min-width: 200px;
+  max-width: 3000px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--color-border, #e5e5e5);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.header:hover {
+  box-shadow: 0 2px 8px var(--color-shadow-light, rgba(0, 0, 0, 0.05));
+}
+
+/**
+ * Main Content Section
+ * Grows to fill available space between header and footer
+ * Container query enabled for responsive inner layouts
+ */
+.main {
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 200px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-main-vertical, 1rem) 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--color-background-secondary, #fafafa);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/**
+ * Content Container with Container Queries
+ * Applies responsive constraints and enables container queries
+ * Supports widths from 200px (mobile) to 3000px (ultra-wide)
+ */
+.contentContainer {
+  width: 100%;
+  min-width: 200px;
+  max-width: 3000px;
+  padding: var(--spacing-container-horizontal, 1rem);
+  box-sizing: border-box;
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-container-gap, 1.5rem);
+}
+
+/**
+ * Container Query Breakpoints
+ * Define responsive behavior based on container width
+ */
+
+/* Ultra-wide displays (2400px+) */
+@container (min-width: 2400px) {
+  .contentContainer {
+    padding: var(--spacing-container-horizontal-xl, 3rem);
+    gap: var(--spacing-container-gap-xl, 2rem);
+  }
+}
+
+/* Desktop (1200px-2399px) */
+@container (min-width: 1200px) and (max-width: 2399px) {
+  .contentContainer {
+    padding: var(--spacing-container-horizontal-lg, 2rem);
+    gap: var(--spacing-container-gap-lg, 1.75rem);
+  }
+}
+
+/* Tablet (768px-1199px) */
+@container (min-width: 768px) and (max-width: 1199px) {
+  .contentContainer {
+    padding: var(--spacing-container-horizontal-md, 1.5rem);
+    gap: var(--spacing-container-gap-md, 1.25rem);
+  }
+}
+
+/* Mobile (200px-767px) */
+@container (max-width: 767px) {
+  .contentContainer {
+    padding: var(--spacing-container-horizontal-sm, 1rem);
+    gap: var(--spacing-container-gap-sm, 1rem);
+  }
+}
+
+/**
+ * Footer Section
+ * Sticky to bottom when content is short
+ * Scrolls with content when needed
+ */
+.footer {
+  flex-shrink: 0;
+  width: 100%;
+  min-width: 200px;
+  max-width: 3000px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  border-top: 1px solid var(--color-border, #e5e5e5);
+  background-color: var(--color-background-tertiary, #f5f5f5);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.footer:hover {
+  box-shadow: 0 -2px 8px var(--color-shadow-light, rgba(0, 0, 0, 0.05));
+}
+
+/**
+ * Media Query Overrides for Viewport Width
+ * Fallback for browsers without full container query support
+ */
+
+@media (max-width: 767px) {
+  .appLayout {
+    font-size: 14px;
+  }
+
+  .main {
+    padding: 0.75rem 0;
+  }
+
+  .contentContainer {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .appLayout {
+    font-size: 15px;
+  }
+
+  .main {
+    padding: 1.25rem 0;
+  }
+
+  .contentContainer {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .appLayout {
+    font-size: 16px;
+  }
+
+  .main {
+    padding: 1.5rem 0;
+  }
+
+  .contentContainer {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 2400px) {
+  .contentContainer {
+    padding: 3rem;
+  }
+}
+
+/**
+ * Dark Theme Support
+ * Applies consistent dark theme colors using CSS variables
+ */
+[data-theme="dark"] .appLayout {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .header {
+  border-bottom-color: #334155;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .main {
+  background-color: #1e293b;
+}
+
+[data-theme="dark"] .footer {
+  border-top-color: #334155;
+  background-color: #1e293b;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/**
+ * Print Styles
+ * Optimize for printing
+ */
+@media print {
+  .appLayout {
+    min-height: auto;
+  }
+
+  .main {
+    overflow: visible;
+  }
+
+  .header,
+  .footer {
+    break-inside: avoid;
+  }
+}

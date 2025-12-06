@@ -1,0 +1,102 @@
+.globeContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  border-radius: 8px;
+}
+
+/* Mobile devices (200px - 600px) */
+@media (max-width: 600px) {
+  .globeContainer {
+    min-height: 280px;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Tablets (600px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .globeContainer {
+    min-height: 400px;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* Desktop (1024px - 1920px) */
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .globeContainer {
+    min-height: 500px;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* Ultra-wide (1920px+) */
+@media (min-width: 1921px) {
+  .globeContainer {
+    min-height: 600px;
+    aspect-ratio: 21 / 9;
+  }
+}
+
+/* Canvas anti-aliasing and smoothing */
+.globeContainer canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  image-rendering: auto;
+  image-rendering: high-quality;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent text selection on canvas interaction */
+.globeContainer {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Dark theme background with gradient */
+.globeContainer {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(77, 166, 255, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+}
+
+/* Smooth transitions for theme changes */
+.globeContainer {
+  transition: background 0.3s ease-in-out;
+}
+
+/* Accessibility: Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .globeContainer canvas {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast support */
+@media (prefers-contrast: more) {
+  .globeContainer {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .globeContainer {
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  }
+}
+
+/* Light mode support */
+@media (prefers-color-scheme: light) {
+  .globeContainer {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+  }
+}

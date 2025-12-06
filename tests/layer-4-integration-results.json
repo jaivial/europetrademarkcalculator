@@ -1,0 +1,223 @@
+{
+  "layer": 4,
+  "type": "integration-tests",
+  "project": "brand-calculator",
+  "target": "component-integration",
+  "timestamp": "2025-12-05T18:53:00Z",
+  "duration": "10.75s",
+  "status": "PARTIAL_PASS",
+  "summary": {
+    "total": 14,
+    "passed": 9,
+    "failed": 5,
+    "skipped": 0,
+    "test_files": 2,
+    "test_files_passed": 1,
+    "test_files_failed": 1
+  },
+  "categories": {
+    "worldmap_3d_integration": {
+      "total": 5,
+      "passed": 0,
+      "failed": 5,
+      "test_file": "src/components/WorldMap3D/__tests__/integration.test.tsx",
+      "status": "FAIL",
+      "issues": [
+        "Three.js group ref not properly initialized in test environment",
+        "groupRef.current.children.forEach is not a function",
+        "groupRef.current.clear is not a function"
+      ]
+    },
+    "country_list_integration": {
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "test_file": "src/components/CountryList/__tests__/integration.test.tsx",
+      "status": "PASS",
+      "subcategories": {
+        "component_integration": 2,
+        "jotai_state_integration": 2,
+        "flag_standalone": 2,
+        "user_flow": 1,
+        "accessibility": 2
+      }
+    }
+  },
+  "test_details": {
+    "passed_tests": [
+      {
+        "name": "should render CountryCard with CountryFlag component",
+        "category": "CountryCard with CountryFlag Integration",
+        "file": "src/components/CountryList/__tests__/integration.test.tsx",
+        "duration": "1067ms",
+        "integration_type": "component-to-component"
+      },
+      {
+        "name": "should render multiple country cards with different flags",
+        "category": "CountryCard with CountryFlag Integration",
+        "file": "src/components/CountryList/__tests__/integration.test.tsx",
+        "duration": "682ms",
+        "integration_type": "component-to-component"
+      },
+      {
+        "name": "should integrate with Jotai selectedCountryAtom",
+        "category": "CountryCard with Jotai State Integration",
+        "file": "src/components/CountryList/__tests__/integration.test.tsx",
+        "integration_type": "component-to-atom"
+      },
+      {
+        "name": "should update selection when clicking different cards",
+        "category": "CountryCard with Jotai State Integration",
+        "file": "src/components/CountryList/__tests__/integration.test.tsx",
+        "duration": "474ms",
+        "integration_type": "component-to-atom"
+      },
+      {
+        "name": "should render CountryFlag independently",
+        "category": "CountryFlag Standalone Integration",
+        "file": "src/components/CountryList/__tests__/integration.test.tsx",
+        "integration_type": "component"
+      },
+      {
+        "name": "should apply custom className to CountryFlag",
+        "category": "CountryFlag Standalone Integration",
+        "file": "src/components/CountryList/__tests__/integration.test.tsx",
+        "integration_type": "component"
+      },
+      {
+        "name": "should support full selection workflow",
+        "category": "Full User Flow Integration",
+        "file": "src/components/CountryList/__tests__/integration.test.tsx",
+        "duration": "477ms",
+        "integration_type": "end-to-end-flow",
+        "tested_interactions": [
+          "Mouse click selection",
+          "Keyboard Enter selection",
+          "Keyboard Space selection",
+          "Atom state updates"
+        ]
+      },
+      {
+        "name": "should maintain keyboard navigation across multiple cards",
+        "category": "Accessibility Integration",
+        "file": "src/components/CountryList/__tests__/integration.test.tsx",
+        "integration_type": "accessibility"
+      },
+      {
+        "name": "should handle disabled cards correctly in navigation",
+        "category": "Accessibility Integration",
+        "file": "src/components/CountryList/__tests__/integration.test.tsx",
+        "integration_type": "accessibility"
+      }
+    ],
+    "failed_tests": [
+      {
+        "name": "renders country mesh and highlight together",
+        "category": "WorldMap3D - Integration Tests",
+        "file": "src/components/WorldMap3D/__tests__/integration.test.tsx",
+        "error": "TypeError: groupRef.current.children.forEach is not a function",
+        "error_location": "src/components/WorldMap3D/CountryMesh.tsx:50:31",
+        "root_cause": "THREE.Group ref not properly mocked in JSDOM test environment",
+        "integration_type": "component-to-component-3d"
+      },
+      {
+        "name": "manages state across multiple countries",
+        "category": "WorldMap3D - Integration Tests",
+        "file": "src/components/WorldMap3D/__tests__/integration.test.tsx",
+        "error": "TypeError: groupRef.current.children.forEach is not a function",
+        "error_location": "src/components/WorldMap3D/CountryMesh.tsx:50:31",
+        "root_cause": "THREE.Group ref not properly mocked in JSDOM test environment",
+        "integration_type": "atom-state-management"
+      },
+      {
+        "name": "tracks selection history through state",
+        "category": "WorldMap3D - Integration Tests",
+        "file": "src/components/WorldMap3D/__tests__/integration.test.tsx",
+        "error": "TypeError: groupRef.current.children.forEach is not a function",
+        "error_location": "src/components/WorldMap3D/CountryMesh.tsx:50:31",
+        "root_cause": "THREE.Group ref not properly mocked in JSDOM test environment",
+        "integration_type": "atom-state-management"
+      },
+      {
+        "name": "handles highlight visibility based on selection",
+        "category": "WorldMap3D - Integration Tests",
+        "file": "src/components/WorldMap3D/__tests__/integration.test.tsx",
+        "error": "TypeError: groupRef.current.clear is not a function",
+        "error_location": "src/components/WorldMap3D/CountryHighlight.tsx:46:22",
+        "root_cause": "THREE.Group ref not properly mocked in JSDOM test environment",
+        "integration_type": "component-to-component-3d"
+      },
+      {
+        "name": "manages hover state independently from selection",
+        "category": "WorldMap3D - Integration Tests",
+        "file": "src/components/WorldMap3D/__tests__/integration.test.tsx",
+        "error": "TypeError: groupRef.current.children.forEach is not a function",
+        "error_location": "src/components/WorldMap3D/CountryMesh.tsx:50:31",
+        "root_cause": "THREE.Group ref not properly mocked in JSDOM test environment",
+        "integration_type": "atom-state-management"
+      }
+    ]
+  },
+  "integration_coverage": {
+    "tested_integrations": [
+      "CountryCard ↔ CountryFlag (component composition)",
+      "CountryCard ↔ selectedCountryAtom (Jotai state)",
+      "CountryCard ↔ User interactions (click, keyboard)",
+      "Multiple CountryCards ↔ Shared Jotai atom state",
+      "CountryMesh ↔ selectedCountryAtom (attempted, failed)",
+      "CountryMesh ↔ hoveredCountryAtom (attempted, failed)",
+      "CountryMesh ↔ CountryHighlight (attempted, failed)"
+    ],
+    "jotai_atoms_tested": [
+      "selectedCountryAtom - PASS (CountryList)",
+      "selectedCountryAtom - FAIL (WorldMap3D)",
+      "hoveredCountryAtom - FAIL (WorldMap3D)",
+      "selectionHistoryAtom - FAIL (WorldMap3D)"
+    ],
+    "component_pairs_tested": [
+      {
+        "pair": "CountryCard + CountryFlag",
+        "status": "PASS",
+        "integration_points": ["rendering", "props passing"]
+      },
+      {
+        "pair": "CountryMesh + CountryHighlight",
+        "status": "FAIL",
+        "integration_points": ["THREE.js refs", "shared state"]
+      }
+    ]
+  },
+  "environment": {
+    "test_framework": "vitest@1.6.1",
+    "test_environment": "jsdom",
+    "testing_library": "@testing-library/react@16.3.0",
+    "state_management": "jotai@2.6.0",
+    "3d_library": "three@0.160.0 + @react-three/fiber@8.15.0",
+    "node_version": "24.11.1"
+  },
+  "warnings": [
+    "Multiple instances of Three.js being imported - may cause issues",
+    "WebGL rendering context mocked - 3D tests require proper Three.js mocking",
+    "Canvas element tests rely on JSDOM which has limited 3D support"
+  ],
+  "recommendations": [
+    "Add proper Three.js Group mock with children array and clear() method",
+    "Consider using @testing-library/react-three-fiber for 3D component testing",
+    "Implement Canvas mock wrapper for WorldMap3D integration tests",
+    "Add WebGL context mocking utilities to vitest-setup.ts",
+    "Consider separating 3D integration tests into E2E tests with Playwright"
+  ],
+  "api_coverage": {
+    "tested_atoms": 4,
+    "total_atoms": "~10 (estimated)",
+    "coverage_percentage": 40
+  },
+  "test_execution_metadata": {
+    "transform_time": "763ms",
+    "setup_time": "1.69s",
+    "collect_time": "1.21s",
+    "tests_time": "3.65s",
+    "environment_time": "6.41s",
+    "prepare_time": "1.35s"
+  }
+}

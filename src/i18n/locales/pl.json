@@ -1,0 +1,352 @@
+{
+  "navigation": {
+    "worldMap": "Mapa Świata",
+    "countryList": "Lista Krajów"
+  },
+
+  "common": {
+    "appTitle": "Kalkulator Rejestracji Znaków Towarowych",
+    "appDescription": "Oblicz koszty rejestracji znaków towarowych w krajach europejskich",
+    "language": "Język",
+    "country": "Kraj",
+    "currency": "EUR",
+    "loading": "Ładowanie...",
+    "error": "Wystąpił błąd",
+    "success": "Powodzenie",
+    "cancel": "Anuluj",
+    "confirm": "Potwierdź",
+    "close": "Zamknij",
+    "back": "Wstecz",
+    "next": "Dalej",
+    "save": "Zapisz",
+    "delete": "Usuń",
+    "edit": "Edytuj",
+    "search": "Szukaj",
+    "clear": "Wyczyść",
+    "reset": "Resetuj",
+    "noResults": "Nie znaleziono wyników"
+  },
+  "navigation": {
+    "worldMap": "Mapa świata",
+    "countryList": "Lista krajów",
+    "calculator": "Kalkulator",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "help": "Pomoc"
+  },
+  "theme": {
+    "dark": "Ciemny",
+    "light": "Jasny",
+    "system": "System",
+    "toggleTheme": "Zmień design"
+  },
+  "calculator": {
+    "title": "Kalkulator Rejestracji Znaków Towarowych",
+    "subtitle": "Oblicz koszty rejestracji",
+    "numberOfClasses": "Liczba klas",
+    "classesLabel": "Klasy",
+    "registrationType": "Typ rejestracji",
+    "standard": "Standardowa",
+    "express": "Express",
+    "priority": "Priorytet",
+    "optionalServices": "Usługi dodatkowe",
+    "monitoring": "Monitorowanie",
+    "legalSupport": "Wsparcie prawne",
+    "fastTrack": "Przyspieszenie",
+    "basePrice": "Cena podstawowa",
+    "servicesPrice": "Opłaty za usługi",
+    "totalPrice": "Cena całkowita",
+    "calculate": "Oblicz",
+    "resetCalculator": "Resetuj",
+    "priceEstimate": "Szacunkowe koszty",
+    "perClass": "za klasę",
+    "savings": "Oszczędności"
+  },
+  "globe": {
+    "title": "Mapa świata",
+    "selectCountry": "Wybierz kraj",
+    "rotating": "Automatyczne obrót",
+    "stopRotation": "Zatrzymaj obrót",
+    "startRotation": "Rozpocznij obrót",
+    "zoom": "Powiększenie",
+    "zoomIn": "Powiększ",
+    "zoomOut": "Pomniejsz",
+    "resetView": "Zresetuj widok",
+    "noCountrySelected": "Nie wybrano kraju",
+    "selectToCalculate": "Wybierz kraj, aby rozpocząć"
+  },
+  "countryList": {
+    "title": "Lista krajów",
+    "searchPlaceholder": "Szukaj kraju...",
+    "filter": "Filtruj",
+    "continent": "Kontynent",
+    "europe": "Europa",
+    "asia": "Azja",
+    "africa": "Afryka",
+    "americas": "Ameryka",
+    "oceania": "Oceania",
+    "all": "Wszystkie",
+    "countries": "Kraje",
+    "selectedCountries": "Wybrane kraje",
+    "noCountries": "Nie znaleziono krajów",
+    "clearSelection": "Wyczyść wybór"
+  },
+  "pricing": {
+    "title": "Cennik",
+    "basePrice": "Cena podstawowa",
+    "additionalServices": "Usługi dodatkowe",
+    "currency": "EUR",
+    "estimatedCost": "Szacunkowe koszty",
+    "finalPrice": "Cena ostateczna",
+    "discounts": "Rabaty",
+    "vatNotIncluded": "VAT nie wliczony",
+    "priceBreakdown": "Podział kosztów"
+  },
+  "validation": {
+    "required": "To pole jest wymagane",
+    "invalidInput": "Nieprawidłowe wejście",
+    "minValue": "Wartość minimalna: {value}",
+    "maxValue": "Wartość maksymalna: {value}",
+    "selectCountry": "Proszę wybrać kraj",
+    "selectAtLeastOne": "Proszę wybrać co najmniej jeden element"
+  },
+  "footer": {
+    "product": {
+      "title": "Produkt",
+      "home": "Strona Glowna",
+      "calculator": "Kalkulator",
+      "features": "Funkcje",
+      "pricing": "Cennik"
+    },
+    "company": {
+      "title": "Firma",
+      "about": "O Nas",
+      "blog": "Blog",
+      "contact": "Kontakt",
+      "careers": "Kariera"
+    },
+    "legal": {
+      "title": "Prawne",
+      "privacy": "Polityka Prywatnosci",
+      "terms": "Warunki Uzytkowania",
+      "cookies": "Polityka Cookies",
+      "compliance": "Zgodnosc"
+    },
+    "copyright": {
+      "text": "{{year}} Brand Calculator. Wszelkie prawa zastrzezone."
+    },
+    "branding": {
+      "description": "Oblicz koszty rejestracji znakow towarowych w krajach europejskich"
+    },
+    "social": {
+      "twitter": "Sledz nas na Twitter",
+      "linkedin": "Polacz sie na LinkedIn",
+      "github": "Zobacz na GitHub",
+      "email": "Wyslij email"
+    },
+    "version": {
+      "label": "Wersja",
+      "number": "1.0.0"
+    }
+  },
+
+  "legal": {
+    "backToHome": "Powrót do strony głównej",
+    "lastUpdated": "Ostatnia aktualizacja: grudzień 2024",
+    "createdBy": "Stworzone z miłością przez",
+
+    "privacy": {
+      "title": "Polityka Prywatności",
+      "introduction": "1. Wprowadzenie",
+      "introText1": "Witamy w Kalkulatorze Rejestracji Znaków Towarowych. Niniejsza Polityka Prywatności wyjaśnia, jak postępujemy z informacjami podczas korzystania z naszej strony internetowej i usług.",
+      "importantNotice": "Ważna Informacja:",
+      "introText2": "Jest to projekt edukacyjny non-profit stworzony przez Jaime Villanueva Acon za pośrednictwem Jaime Digital Studio wyłącznie do celów samokształcenia i korzyści społeczności. Nie zbieramy, nie przechowujemy ani nie przetwarzamy żadnych danych osobowych.",
+      "noCollect": "2. Informacje, których NIE zbieramy",
+      "noCollectText": "Ta strona internetowa została zaprojektowana z prywatnością jako podstawową zasadą. NIE:",
+      "noCollectList": {
+        "0": "Zbieramy informacji osobistych (imiona, e-maile, numery telefonów)",
+        "1": "Śledzimy Twojego zachowania podczas przeglądania",
+        "2": "Używamy usług analitycznych lub śledzących",
+        "3": "Przechowujemy plików cookie do celów śledzenia",
+        "4": "Udostępniamy danych stronom trzecim",
+        "5": "Tworzymy kont użytkowników ani profili",
+        "6": "Przetwarzamy informacji o płatnościach"
+      },
+      "localStorage": "3. Lokalna Pamięć",
+      "localStorageText": "Możemy używać lokalnej pamięci przeglądarki wyłącznie do:",
+      "localStorageList": {
+        "0": "Zapisywania Twojej preferencji językowej",
+        "1": "Przechowywania Twojej preferencji motywu (tryb jasny/ciemny)"
+      },
+      "localStorageNote": "Te dane nigdy nie opuszczają Twojego urządzenia i nie są przesyłane na żaden serwer.",
+      "thirdParty": "4. Usługi Stron Trzecich",
+      "thirdPartyText": "Nasza strona może zawierać linki do zewnętrznych stron (LinkedIn, GitHub, Instagram, portfolio). Po kliknięciu tych linków opuszczasz naszą stronę i podlegasz polityce prywatności tych zewnętrznych stron.",
+      "educational": "5. Cel Edukacyjny",
+      "educationalText": "Ten projekt został stworzony w całości do celów edukacyjnych i samokształcenia. Jest:",
+      "educationalList": {
+        "0": "Niekomercyjny i non-profit",
+        "1": "Otwarty dla nauki społeczności",
+        "2": "Demonstracją umiejętności tworzenia stron internetowych",
+        "3": "Nie przeznaczony do faktycznych usług rejestracji znaków towarowych"
+      },
+      "children": "6. Prywatność Dzieci",
+      "childrenText": "Nasza strona świadomie nie zbiera żadnych informacji od nikogo, w tym od dzieci poniżej 13 roku życia.",
+      "changes": "7. Zmiany w tej Polityce",
+      "changesText": "Możemy od czasu do czasu aktualizować tę Politykę Prywatności. Wszelkie zmiany zostaną opublikowane na tej stronie z zaktualizowaną datą.",
+      "contact": "8. Kontakt",
+      "contactText": "Jeśli masz pytania dotyczące tej Polityki Prywatności, możesz skontaktować się z nami przez:"
+    },
+
+    "terms": {
+      "title": "Warunki Użytkowania",
+      "agreement": "1. Zgoda na Warunki",
+      "agreementText": "Uzyskując dostęp do strony Kalkulatora Rejestracji Znaków Towarowych, zgadzasz się na przestrzeganie niniejszych Warunków Użytkowania. Jeśli nie zgadzasz się z którąkolwiek częścią tych warunków, prosimy nie korzystać z naszej strony.",
+      "disclaimer": "2. Zastrzeżenie dotyczące Celu Edukacyjnego",
+      "disclaimerNote": "To NIE jest usługa komercyjna.",
+      "disclaimerText": "Kalkulator Rejestracji Znaków Towarowych to projekt edukacyjny stworzony przez Jaime Villanueva Acon za pośrednictwem Jaime Digital Studio w następujących celach:",
+      "disclaimerList": {
+        "0": "Samokształcenie i rozwój umiejętności",
+        "1": "Demonstracja możliwości tworzenia stron internetowych",
+        "2": "Wkład w społeczność open-source",
+        "3": "Pomoc innym w nauce o technologiach webowych"
+      },
+      "disclaimerNonProfit": "Ten projekt jest całkowicie non-profit i altruistyczny.",
+      "noServices": "3. Brak Usług Profesjonalnych",
+      "important": "Ważne:",
+      "noServicesText": "Ta strona NIE świadczy:",
+      "noServicesList": {
+        "0": "Faktycznych usług rejestracji znaków towarowych",
+        "1": "Porad prawnych ani konsultacji",
+        "2": "Oficjalnych cen za rejestrację znaków towarowych",
+        "3": "Gwarancji zatwierdzenia znaku towarowego",
+        "4": "Jakiejkolwiek formy usługi komercyjnej"
+      },
+      "noServicesNote": "Wszystkie wyświetlane informacje cenowe służą wyłącznie celom demonstracyjnym i mogą nie odzwierciedlać rzeczywistych kosztów. W przypadku prawdziwej rejestracji znaku towarowego skonsultuj się z oficjalnymi urzędami znaków towarowych i wykwalifikowanymi specjalistami prawnymi.",
+      "use": "4. Korzystanie ze Strony",
+      "useText": "Zgadzasz się korzystać z tej strony wyłącznie do:",
+      "useList": {
+        "0": "Celów edukacyjnych i informacyjnych",
+        "1": "Nauki o koncepcjach rejestracji znaków towarowych",
+        "2": "Eksploracji technik tworzenia stron internetowych"
+      },
+      "notUse": "Zgadzasz się NIE:",
+      "notUseList": {
+        "0": "Przedstawiać tego jako oficjalnej usługi znaków towarowych",
+        "1": "Używać informacji do decyzji biznesowych bez profesjonalnej weryfikacji",
+        "2": "Próbować naruszyć bezpieczeństwo strony",
+        "3": "Kopiować ani rozpowszechniać treści w celach komercyjnych"
+      },
+      "ip": "5. Własność Intelektualna",
+      "ipText": "Ten projekt został stworzony przez Jaime Villanueva Acon / Jaime Digital Studio. Kod i design służą demonstracji edukacyjnej. Jeśli chcesz użyć jakiejkolwiek części tego projektu:",
+      "ipList": {
+        "0": "Prosimy o odpowiednie przypisanie autorstwa",
+        "1": "Używaj go tylko do celów niekomercyjnych",
+        "2": "Nie przedstawiaj go jako swojej oryginalnej pracy"
+      },
+      "warranty": "6. Wyłączenie Gwarancji",
+      "warrantyText": "Ta strona jest dostarczana 'jak jest' bez żadnych gwarancji, wyraźnych ani dorozumianych. Nie gwarantujemy:",
+      "warrantyList": {
+        "0": "Dokładności szacunków cenowych",
+        "1": "Kompletności informacji",
+        "2": "Dostępności strony",
+        "3": "Przydatności do określonego celu"
+      },
+      "liability": "7. Ograniczenie Odpowiedzialności",
+      "liabilityText": "W żadnym wypadku Jaime Villanueva Acon ani Jaime Digital Studio nie ponoszą odpowiedzialności za szkody wynikające z korzystania z tej edukacyjnej strony. Obejmuje to, ale nie ogranicza się do:",
+      "liabilityList": {
+        "0": "Decyzji podjętych na podstawie dostarczonych informacji",
+        "1": "Utraty danych lub przerwy w działalności",
+        "2": "Wszelkich szkód bezpośrednich, pośrednich lub wynikowych"
+      },
+      "external": "8. Linki Zewnętrzne",
+      "externalText": "Nasza strona zawiera linki do stron zewnętrznych. Nie ponosimy odpowiedzialności za treść, praktyki prywatności ani warunki korzystania ze stron zewnętrznych.",
+      "changesTerms": "9. Zmiany Warunków",
+      "changesTermsText": "Zastrzegamy sobie prawo do modyfikacji tych warunków w dowolnym czasie. Zmiany wchodzą w życie natychmiast po opublikowaniu na tej stronie.",
+      "contact": "10. Kontakt",
+      "contactText": "W przypadku pytań dotyczących niniejszych Warunków Użytkowania prosimy o kontakt:"
+    },
+
+    "cookies": {
+      "title": "Polityka Cookies",
+      "about": "1. O tej Polityce",
+      "aboutText": "Ta Polityka Cookies wyjaśnia, jak Kalkulator Rejestracji Znaków Towarowych, projekt edukacyjny Jaime Villanueva Acon / Jaime Digital Studio, używa plików cookie i podobnych technologii.",
+      "shortVersion": "Krótka Wersja:",
+      "aboutShort": "Używamy minimalnej lokalnej pamięci tylko dla niezbędnych funkcji. NIE używamy plików cookie śledzących ani analitycznych.",
+      "whatAre": "2. Czym są Cookies?",
+      "whatAreText": "Cookies to małe pliki tekstowe przechowywane na Twoim urządzeniu podczas odwiedzania stron internetowych. Są powszechnie używane do:",
+      "whatAreList": {
+        "0": "Zapamiętywania Twoich preferencji",
+        "1": "Utrzymywania zalogowania",
+        "2": "Śledzenia użycia strony (analityka)",
+        "3": "Wyświetlania ukierunkowanych reklam"
+      },
+      "privacyFirst": "3. Nasze Podejście: Prywatność Przede Wszystkim",
+      "privacyFirstText": "Jako projekt edukacyjny non-profit, priorytetowo traktujemy Twoją prywatność. NIE używamy:",
+      "trackingCookies": "Cookies śledzących",
+      "trackingCookiesDesc": "Nie monitorujemy Twojego zachowania",
+      "analyticsCookies": "Cookies analitycznych",
+      "analyticsCookiesDesc": "Brak Google Analytics ani podobnych usług",
+      "advertisingCookies": "Cookies reklamowych",
+      "advertisingCookiesDesc": "Brak reklam, brak śledzenia reklam",
+      "thirdPartyCookies": "Cookies stron trzecich",
+      "thirdPartyCookiesDesc": "Brak zewnętrznego śledzenia",
+      "socialMediaCookies": "Cookies mediów społecznościowych",
+      "socialMediaCookiesDesc": "Linki nie zawierają trackerów",
+      "whatWeUse": "4. Co Używamy: Lokalna Pamięć",
+      "whatWeUseText": "Używamy lokalnej pamięci przeglądarki (nie cookies) do dwóch istotnych celów:",
+      "languagePref": "Preferencja Języka",
+      "themePref": "Preferencja Motywu",
+      "key": "Klucz",
+      "purpose": "Cel",
+      "duration": "Czas trwania",
+      "dataStored": "Przechowywane dane",
+      "languagePurpose": "Zapamiętanie preferowanego języka",
+      "themePurpose": "Zapamiętanie preferencji trybu jasnego/ciemnego",
+      "untilCleared": "Do wyczyszczenia danych przeglądarki",
+      "languageCode": "Kod języka (np. 'pl', 'en')",
+      "themeValue": "'light' lub 'dark'",
+      "differences": "5. Kluczowe Różnice: Cookies vs Lokalna Pamięć",
+      "feature": "Funkcja",
+      "cookiesColumn": "Cookies",
+      "localStorageColumn": "Lokalna Pamięć",
+      "sentToServer": "Wysyłane na serwer",
+      "yesEveryRequest": "Tak, z każdym żądaniem",
+      "noStaysOnDevice": "Nie, pozostaje na urządzeniu",
+      "accessedByOthers": "Dostępne dla innych stron",
+      "sometimesThirdParty": "Czasami (strony trzecie)",
+      "no": "Nie",
+      "usedForTracking": "Używane do śledzenia",
+      "often": "Często",
+      "rarely": "Rzadko",
+      "whyLocalStorage": "Wybraliśmy lokalną pamięć, ponieważ Twoje preferencje nigdy nie opuszczają Twojego urządzenia.",
+      "managing": "6. Zarządzanie Twoimi Danymi",
+      "managingText": "Możesz usunąć dane lokalnej pamięci w dowolnym momencie:",
+      "chromeInstructions": "Ustawienia → Prywatność → Wyczyść dane przeglądania → Dane witryn",
+      "firefoxInstructions": "Ustawienia → Prywatność → Wyczyść dane",
+      "safariInstructions": "Preferencje → Prywatność → Zarządzaj danymi witryn",
+      "edgeInstructions": "Ustawienia → Prywatność → Wyczyść dane przeglądania",
+      "clearingNote": "Wyczyszczenie tych danych zresetuje Twoje preferencje języka i motywu do wartości domyślnych.",
+      "externalLinks": "7. Linki Zewnętrzne",
+      "externalLinksText": "Nasza stopka zawiera linki do:",
+      "portfolio": "portfolio",
+      "externalLinksNote": "Te zewnętrzne strony mają własne polityki cookies. Zalecamy zapoznanie się z nimi podczas wizyty.",
+      "updates": "8. Aktualizacje tej Polityki",
+      "updatesText": "Możemy zaktualizować tę politykę, jeśli zmienimy sposób postępowania z danymi. Data 'Ostatnia aktualizacja' u góry będzie odzwierciedlać wszelkie zmiany.",
+      "contact": "9. Kontakt",
+      "contactText": "Pytania dotyczące tej Polityki Cookies? Skontaktuj się z nami:"
+    }
+  },
+
+  "messages": {
+    "success": "Operacja powiodła się",
+    "error": "Wystąpił błąd",
+    "warning": "Ostrzeżenie",
+    "info": "Informacja",
+    "noData": "Brak dostępnych danych",
+    "tryAgain": "Spróbuj ponownie",
+    "loading": "Ładowanie, proszę czekać...",
+    "saved": "Pomyślnie zapisano",
+    "deleted": "Pomyślnie usunięto",
+    "updated": "Pomyślnie zaktualizowano"
+  }
+}

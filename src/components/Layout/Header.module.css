@@ -1,0 +1,317 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--header-bg, #ffffff);
+  border-bottom: 1px solid var(--header-border, #e5e7eb);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin: 0;
+  min-height: 64px;
+  max-width: 3000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto;
+  gap: 16px;
+  align-items: center;
+  height: 100%;
+  min-height: 64px;
+  padding: 12px 24px;
+  max-width: 3000px;
+  margin: 0 auto;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.titleSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  color: var(--header-title, #000000);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+.controlsSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.controlSlot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+/* Theme Toggle Button Styles */
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid var(--theme-toggle-border, #e5e7eb);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--theme-toggle-color, #374151);
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.themeToggle:hover {
+  background-color: var(--theme-toggle-hover-bg, #f3f4f6);
+  border-color: var(--theme-toggle-hover-border, #d1d5db);
+  transform: scale(1.05);
+}
+
+.themeToggle:active {
+  transform: scale(0.95);
+}
+
+.themeToggle:focus {
+  outline: 2px solid var(--theme-toggle-focus, #3b82f6);
+  outline-offset: 2px;
+}
+
+.themeToggle:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.themeToggle:focus-visible {
+  outline: 2px solid var(--theme-toggle-focus, #3b82f6);
+  outline-offset: 2px;
+}
+
+.themeIcon {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Smooth theme transition for entire page */
+:global(html.dark),
+:global(html.light) {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode specific styles for theme toggle */
+:global(html.dark) .themeToggle,
+:global([data-theme="dark"]) .themeToggle {
+  --theme-toggle-border: #4b5563;
+  --theme-toggle-color: #f3f4f6;
+  --theme-toggle-hover-bg: #374151;
+  --theme-toggle-hover-border: #6b7280;
+  --theme-toggle-focus: #60a5fa;
+}
+
+/* Extra Small Devices (200px - 360px) */
+@media (max-width: 360px) {
+  .container {
+    grid-template-columns: auto 1fr auto;
+    gap: 6px;
+    padding: 8px 10px;
+    min-height: 52px;
+  }
+
+  .header {
+    min-height: 52px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .titleSection {
+    display: none;
+  }
+
+  .controlSlot {
+    padding: 2px;
+  }
+}
+
+/* Small Devices (361px - 480px) */
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: auto 1fr auto;
+    gap: 8px;
+    padding: 8px 12px;
+    min-height: 54px;
+  }
+
+  .header {
+    min-height: 54px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .controlSlot {
+    padding: 2px;
+  }
+}
+
+/* Medium Devices (481px - 768px) */
+@media (max-width: 768px) {
+  .container {
+    gap: 12px;
+    padding: 10px 16px;
+    min-height: 58px;
+  }
+
+  .header {
+    min-height: 58px;
+  }
+
+  .title {
+    font-size: 17px;
+  }
+
+  .controlSlot {
+    padding: 4px;
+  }
+}
+
+/* Large Devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    gap: 16px;
+    padding: 12px 20px;
+    min-height: 64px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .controlSlot {
+    padding: 6px;
+  }
+}
+
+/* Extra Large Devices (1025px - 3000px) */
+@media (min-width: 1025px) {
+  .container {
+    gap: 16px;
+    padding: 12px 32px;
+    min-height: 70px;
+    max-width: 3000px;
+  }
+
+  .header {
+    min-height: 70px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .controlSlot {
+    padding: 8px;
+  }
+}
+
+/* Responsive Adjustments for Different Orientations */
+@media (orientation: landscape) and (max-height: 500px) {
+  .container {
+    min-height: 52px;
+    padding: 8px 16px;
+  }
+
+  .header {
+    min-height: 52px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .header {
+    position: relative;
+    box-shadow: none;
+    border-bottom: 2px solid #000;
+  }
+
+  .controlsSection {
+    display: none;
+  }
+}
+
+/* Dark Theme Support */
+[data-theme="dark"] .header {
+  background-color: #0f172a;
+  border-bottom-color: #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .container {
+  background-color: transparent;
+}
+
+[data-theme="dark"] .title {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .controlSlot {
+  color: #e2e8f0;
+}
+
+/* Dark Mode Support (System Preference) */
+@media (prefers-color-scheme: dark) {
+  .header {
+    --header-bg: #0f172a;
+    --header-border: #334155;
+    --header-title: #f1f5f9;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+  .header {
+    border-bottom-width: 2px;
+  }
+
+  .title {
+    font-weight: 700;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .header {
+    scroll-behavior: auto;
+  }
+}

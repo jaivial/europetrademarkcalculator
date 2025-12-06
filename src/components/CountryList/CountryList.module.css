@@ -1,0 +1,427 @@
+/* CountryList - Searchable country grid */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 200px);
+  background: var(--bg-primary, #ffffff);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  padding: 20px 24px 16px;
+  background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+  color: white;
+}
+
+.title {
+  margin: 0 0 4px;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: clamp(13px, 1.8vw, 15px);
+  opacity: 0.85;
+}
+
+/* Search Section */
+.searchSection {
+  padding: 16px 24px;
+  background: var(--bg-primary, #ffffff);
+  border-bottom: 1px solid var(--border-color, #e0e0e0);
+}
+
+.searchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 14px 44px;
+  background: var(--bg-secondary, #f5f5f5);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  font-size: clamp(14px, 1.8vw, 16px);
+  color: var(--text-primary, #1a1a2e);
+  transition: all 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--accent-color, #0066cc);
+  background: var(--bg-primary, #ffffff);
+  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+}
+
+.searchInput::placeholder {
+  color: var(--text-tertiary, #999);
+}
+
+.clearButton {
+  position: absolute;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary, #e0e0e0);
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  color: var(--text-secondary, #666);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clearButton:hover {
+  background: var(--accent-color, #0066cc);
+  color: white;
+}
+
+/* Grid Container - Scrollable */
+.gridContainer {
+  flex: 1;
+  padding: 16px 24px 24px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100vh - 300px);
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color, #0066cc) transparent;
+}
+
+.gridContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.gridContainer::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.gridContainer::-webkit-scrollbar-thumb {
+  background: var(--accent-color, #0066cc);
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+.gridContainer::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover, #0052a3);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+/* Country Card */
+.countryCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 16px;
+  background: var(--bg-secondary, #f5f5f5);
+  border: 2px solid transparent;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.countryCard:hover {
+  background: var(--bg-hover, #eaeaea);
+  border-color: var(--border-color, #d0d0d0);
+  transform: translateY(-2px);
+}
+
+.countryCard.selected {
+  background: rgba(0, 102, 204, 0.1);
+  border-color: var(--accent-color, #0066cc);
+  box-shadow: 0 4px 16px rgba(0, 102, 204, 0.2);
+}
+
+.countryCard.hasPricing {
+  background: linear-gradient(180deg, var(--bg-secondary, #f5f5f5) 0%, rgba(56, 161, 105, 0.08) 100%);
+}
+
+.countryCard.hasPricing.selected {
+  background: linear-gradient(180deg, rgba(0, 102, 204, 0.1) 0%, rgba(56, 161, 105, 0.15) 100%);
+}
+
+/* Flag */
+.flag {
+  font-size: clamp(36px, 5vw, 48px);
+  line-height: 1;
+}
+
+/* Country Info */
+.countryInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.countryName {
+  font-size: clamp(14px, 1.8vw, 16px);
+  font-weight: 600;
+  color: var(--text-primary, #1a1a2e);
+}
+
+.countryCode {
+  font-size: clamp(11px, 1.4vw, 13px);
+  color: var(--text-secondary, #666);
+  font-weight: 500;
+}
+
+/* Price Badge */
+.priceBadge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Selection Indicator */
+.selectedIndicator {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-color, #0066cc);
+  border-radius: 50%;
+  font-size: 14px;
+  color: white;
+  animation: scaleIn 0.2s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.emptyText {
+  margin: 0 0 16px;
+  font-size: 18px;
+  color: var(--text-secondary, #666);
+}
+
+.clearSearchBtn {
+  padding: 10px 20px;
+  background: var(--accent-color, #0066cc);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clearSearchBtn:hover {
+  background: #0052a3;
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    min-height: calc(100vh - 350px);
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    min-height: 400px;
+  }
+
+  .header {
+    padding: 16px 16px 12px;
+  }
+
+  .searchSection {
+    padding: 12px 16px;
+  }
+
+  .gridContainer {
+    padding: 12px 16px 16px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+  }
+
+  .countryCard {
+    padding: 16px 12px;
+  }
+
+  .flag {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* Dark Theme */
+[data-theme="dark"] .container {
+  background: var(--bg-primary-dark, #1a1a2e);
+}
+
+[data-theme="dark"] .header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+}
+
+[data-theme="dark"] .searchSection {
+  background: var(--bg-primary-dark, #1a1a2e);
+  border-color: var(--border-color-dark, #3a3a5a);
+}
+
+[data-theme="dark"] .searchInput {
+  background: var(--bg-secondary-dark, #252540);
+  color: var(--text-primary-dark, #f0f0f0);
+  border-color: var(--border-color-dark, #3a3a5a);
+}
+
+[data-theme="dark"] .searchInput::placeholder {
+  color: var(--text-tertiary-dark, #6b7280);
+}
+
+[data-theme="dark"] .searchInput:focus {
+  background: var(--bg-primary-dark, #1a1a2e);
+  border-color: var(--accent-color, #3b82f6);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .gridContainer {
+  scrollbar-color: var(--accent-color-dark, #3b82f6) var(--bg-secondary-dark, #252540);
+}
+
+[data-theme="dark"] .gridContainer::-webkit-scrollbar-track {
+  background: var(--bg-secondary-dark, #252540);
+}
+
+[data-theme="dark"] .gridContainer::-webkit-scrollbar-thumb {
+  background: var(--accent-color-dark, #3b82f6);
+}
+
+[data-theme="dark"] .countryCard {
+  background: var(--bg-secondary-dark, #252540);
+  border-color: var(--border-color-dark, #3a3a5a);
+}
+
+[data-theme="dark"] .countryCard:hover {
+  background: var(--bg-tertiary-dark, #2d2d4a);
+  border-color: var(--border-hover-dark, #4a4a6a);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .countryCard.selected {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: var(--accent-color-dark, #3b82f6);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.25);
+}
+
+[data-theme="dark"] .countryCard.hasPricing {
+  background: linear-gradient(180deg, var(--bg-secondary-dark, #252540) 0%, rgba(34, 197, 94, 0.1) 100%);
+}
+
+[data-theme="dark"] .countryCard.hasPricing.selected {
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.15) 0%, rgba(34, 197, 94, 0.15) 100%);
+}
+
+[data-theme="dark"] .countryName {
+  color: var(--text-primary-dark, #f0f0f0);
+}
+
+[data-theme="dark"] .countryCode {
+  color: var(--text-secondary-dark, #9ca3af);
+}
+
+[data-theme="dark"] .priceBadge {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+}
+
+[data-theme="dark"] .selectedIndicator {
+  background: var(--accent-color-dark, #3b82f6);
+}
+
+[data-theme="dark"] .clearButton {
+  background: var(--bg-tertiary-dark, #3a3a5a);
+  color: var(--text-secondary-dark, #9ca3af);
+}
+
+[data-theme="dark"] .clearButton:hover {
+  background: var(--accent-color-dark, #3b82f6);
+  color: white;
+}
+
+[data-theme="dark"] .emptyState {
+  color: var(--text-secondary-dark, #9ca3af);
+}
+
+[data-theme="dark"] .emptyText {
+  color: var(--text-secondary-dark, #9ca3af);
+}
+
+[data-theme="dark"] .clearSearchBtn {
+  background: var(--accent-color-dark, #3b82f6);
+}
+
+[data-theme="dark"] .clearSearchBtn:hover {
+  background: var(--accent-hover-dark, #2563eb);
+}

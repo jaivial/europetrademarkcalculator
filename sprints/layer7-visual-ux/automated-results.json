@@ -1,0 +1,297 @@
+{
+  "layer": 7,
+  "type": "visual-ux-tests",
+  "timestamp": "2025-12-06T00:01:10.861Z",
+  "duration": "0.09s",
+  "status": "PASS",
+  "baseUrl": "http://localhost:3001",
+  "breakpoints": {
+    "xs": {
+      "width_range": "200px - 479px",
+      "test_widths": [
+        200,
+        320,
+        400
+      ],
+      "issues": [
+        {
+          "type": "mobile-navigation",
+          "severity": "medium",
+          "message": "No mobile navigation pattern detected in static HTML",
+          "breakpoint": "xs",
+          "width": 200
+        },
+        {
+          "type": "touch-targets",
+          "severity": "medium",
+          "message": "Touch target optimization may be missing in static HTML",
+          "breakpoint": "xs",
+          "width": 200
+        },
+        {
+          "type": "mobile-navigation",
+          "severity": "medium",
+          "message": "No mobile navigation pattern detected in static HTML",
+          "breakpoint": "xs",
+          "width": 320
+        },
+        {
+          "type": "touch-targets",
+          "severity": "medium",
+          "message": "Touch target optimization may be missing in static HTML",
+          "breakpoint": "xs",
+          "width": 320
+        },
+        {
+          "type": "mobile-navigation",
+          "severity": "medium",
+          "message": "No mobile navigation pattern detected in static HTML",
+          "breakpoint": "xs",
+          "width": 400
+        },
+        {
+          "type": "touch-targets",
+          "severity": "medium",
+          "message": "Touch target optimization may be missing in static HTML",
+          "breakpoint": "xs",
+          "width": 400
+        }
+      ],
+      "checks_run": 15
+    },
+    "sm": {
+      "width_range": "480px - 767px",
+      "test_widths": [
+        480,
+        600,
+        700
+      ],
+      "issues": [
+        {
+          "type": "mobile-navigation",
+          "severity": "medium",
+          "message": "No mobile navigation pattern detected in static HTML",
+          "breakpoint": "sm",
+          "width": 480
+        },
+        {
+          "type": "touch-targets",
+          "severity": "medium",
+          "message": "Touch target optimization may be missing in static HTML",
+          "breakpoint": "sm",
+          "width": 480
+        },
+        {
+          "type": "mobile-navigation",
+          "severity": "medium",
+          "message": "No mobile navigation pattern detected in static HTML",
+          "breakpoint": "sm",
+          "width": 600
+        },
+        {
+          "type": "touch-targets",
+          "severity": "medium",
+          "message": "Touch target optimization may be missing in static HTML",
+          "breakpoint": "sm",
+          "width": 600
+        },
+        {
+          "type": "mobile-navigation",
+          "severity": "medium",
+          "message": "No mobile navigation pattern detected in static HTML",
+          "breakpoint": "sm",
+          "width": 700
+        },
+        {
+          "type": "touch-targets",
+          "severity": "medium",
+          "message": "Touch target optimization may be missing in static HTML",
+          "breakpoint": "sm",
+          "width": 700
+        }
+      ],
+      "checks_run": 15
+    },
+    "md": {
+      "width_range": "768px - 1023px",
+      "test_widths": [
+        768,
+        900,
+        1000
+      ],
+      "issues": [],
+      "checks_run": 15
+    },
+    "lg": {
+      "width_range": "1024px - 1919px",
+      "test_widths": [
+        1024,
+        1280,
+        1600
+      ],
+      "issues": [],
+      "checks_run": 15
+    },
+    "xl": {
+      "width_range": "1920px - 3000px",
+      "test_widths": [
+        1920,
+        2560,
+        3000
+      ],
+      "issues": [
+        {
+          "type": "max-width",
+          "severity": "low",
+          "message": "Content may stretch too wide on large screens",
+          "breakpoint": "xl",
+          "width": 2560
+        },
+        {
+          "type": "max-width",
+          "severity": "low",
+          "message": "Content may stretch too wide on large screens",
+          "breakpoint": "xl",
+          "width": 3000
+        }
+      ],
+      "checks_run": 15
+    }
+  },
+  "summary": {
+    "total_breakpoints": 5,
+    "total_widths_tested": 15,
+    "total_checks": 90,
+    "high_severity_issues": 0,
+    "medium_severity_issues": 15,
+    "low_severity_issues": 3
+  },
+  "issues": [
+    {
+      "type": "accessibility",
+      "severity": "medium",
+      "message": "Low number of ARIA labels found (0) in static HTML",
+      "breakpoint": "all",
+      "width": 0
+    },
+    {
+      "type": "semantic-html",
+      "severity": "medium",
+      "message": "Missing semantic HTML elements (nav, header) in static HTML",
+      "breakpoint": "all",
+      "width": 0
+    },
+    {
+      "type": "theme-support",
+      "severity": "medium",
+      "message": "Theme toggle functionality not detected in static HTML",
+      "breakpoint": "all",
+      "width": 0
+    },
+    {
+      "type": "i18n-selector",
+      "severity": "low",
+      "message": "Language selector not detected in initial HTML (may load dynamically)",
+      "breakpoint": "all",
+      "width": 0
+    },
+    {
+      "type": "mobile-navigation",
+      "severity": "medium",
+      "message": "No mobile navigation pattern detected in static HTML",
+      "breakpoint": "xs",
+      "width": 200
+    },
+    {
+      "type": "touch-targets",
+      "severity": "medium",
+      "message": "Touch target optimization may be missing in static HTML",
+      "breakpoint": "xs",
+      "width": 200
+    },
+    {
+      "type": "mobile-navigation",
+      "severity": "medium",
+      "message": "No mobile navigation pattern detected in static HTML",
+      "breakpoint": "xs",
+      "width": 320
+    },
+    {
+      "type": "touch-targets",
+      "severity": "medium",
+      "message": "Touch target optimization may be missing in static HTML",
+      "breakpoint": "xs",
+      "width": 320
+    },
+    {
+      "type": "mobile-navigation",
+      "severity": "medium",
+      "message": "No mobile navigation pattern detected in static HTML",
+      "breakpoint": "xs",
+      "width": 400
+    },
+    {
+      "type": "touch-targets",
+      "severity": "medium",
+      "message": "Touch target optimization may be missing in static HTML",
+      "breakpoint": "xs",
+      "width": 400
+    },
+    {
+      "type": "mobile-navigation",
+      "severity": "medium",
+      "message": "No mobile navigation pattern detected in static HTML",
+      "breakpoint": "sm",
+      "width": 480
+    },
+    {
+      "type": "touch-targets",
+      "severity": "medium",
+      "message": "Touch target optimization may be missing in static HTML",
+      "breakpoint": "sm",
+      "width": 480
+    },
+    {
+      "type": "mobile-navigation",
+      "severity": "medium",
+      "message": "No mobile navigation pattern detected in static HTML",
+      "breakpoint": "sm",
+      "width": 600
+    },
+    {
+      "type": "touch-targets",
+      "severity": "medium",
+      "message": "Touch target optimization may be missing in static HTML",
+      "breakpoint": "sm",
+      "width": 600
+    },
+    {
+      "type": "mobile-navigation",
+      "severity": "medium",
+      "message": "No mobile navigation pattern detected in static HTML",
+      "breakpoint": "sm",
+      "width": 700
+    },
+    {
+      "type": "touch-targets",
+      "severity": "medium",
+      "message": "Touch target optimization may be missing in static HTML",
+      "breakpoint": "sm",
+      "width": 700
+    },
+    {
+      "type": "max-width",
+      "severity": "low",
+      "message": "Content may stretch too wide on large screens",
+      "breakpoint": "xl",
+      "width": 2560
+    },
+    {
+      "type": "max-width",
+      "severity": "low",
+      "message": "Content may stretch too wide on large screens",
+      "breakpoint": "xl",
+      "width": 3000
+    }
+  ]
+}

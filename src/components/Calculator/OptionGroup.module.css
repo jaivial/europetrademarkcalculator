@@ -1,0 +1,152 @@
+/* src/components/Calculator/OptionGroup.module.css */
+.optionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--color-background-primary);
+  border: 1px solid var(--color-border-standard);
+  border-radius: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.optionGroupHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.optionGroupTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.optionGroupDescription {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.optionGroupItems {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Grid layout based on option type */
+.optionGroupItems.type-classes {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.optionGroupItems.type-filing-types {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.optionGroupItems.type-services {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.optionGroupFooter {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.optionGroupHint {
+  font-size: 0.8125rem;
+  color: var(--color-text-tertiary);
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .optionGroup {
+    padding: 1.25rem;
+    gap: 1.25rem;
+  }
+
+  .optionGroupTitle {
+    font-size: 1.125rem;
+  }
+
+  .optionGroupDescription {
+    font-size: 0.875rem;
+  }
+
+  .optionGroupItems.type-classes {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+
+  .optionGroupItems.type-filing-types {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .optionGroupItems.type-services {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .optionGroup {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .optionGroupTitle {
+    font-size: 1rem;
+  }
+
+  .optionGroupDescription {
+    font-size: 0.8125rem;
+  }
+
+  .optionGroupItems.type-classes {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  }
+
+  .optionGroupItems.type-filing-types {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .optionGroupItems.type-services {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .optionGroup {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .optionGroupTitle {
+    font-size: 0.9375rem;
+  }
+
+  .optionGroupDescription {
+    font-size: 0.75rem;
+  }
+
+  .optionGroupItems {
+    gap: 0.75rem;
+  }
+
+  .optionGroupItems.type-classes {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+
+  .optionGroupItems.type-filing-types {
+    grid-template-columns: 1fr;
+  }
+
+  .optionGroupItems.type-services {
+    grid-template-columns: 1fr;
+  }
+}
