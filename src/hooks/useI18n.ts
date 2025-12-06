@@ -40,7 +40,7 @@ export function useI18n() {
   /**
    * Check if language is RTL
    */
-  const isRTL = SUPPORTED_LANGUAGES[currentLanguage]?.direction === 'rtl';
+  const isRTL = (SUPPORTED_LANGUAGES[currentLanguage]?.direction as string) === 'rtl';
 
   return {
     t,

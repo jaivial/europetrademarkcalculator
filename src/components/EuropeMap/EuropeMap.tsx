@@ -69,7 +69,7 @@ const CAPITALS: Record<string, [number, number]> = {
 };
 
 // Generate markers for countries with pricing
-const generateMarkers = (countries: Country[]) => {
+const generateMarkers = (countries: readonly Country[]) => {
   return countries
     .filter((c) => c.brandRegistration && CAPITALS[c.code])
     .map((country) => ({
@@ -282,7 +282,8 @@ export const EuropeMap: React.FC<EuropeMapProps> = ({
 
   // Custom tooltip content - disabled on touch devices
   const handleRegionTipShow = useCallback(
-    (event: Event, el: { html: (content: string) => void }, code: string) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (event: any, el: any, code: string) => {
       // Hide tooltip on touch devices
       if (isTouchDevice) {
         (event as Event & { preventDefault?: () => void }).preventDefault?.();
@@ -366,8 +367,6 @@ export const EuropeMap: React.FC<EuropeMapProps> = ({
                 '#0066cc', // 4: Selected (bright blue)
               ],
               normalizeFunction: 'linear',
-              min: 0,
-              max: 4,
             },
           ],
         }}

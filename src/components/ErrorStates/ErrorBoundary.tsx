@@ -68,7 +68,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     }
 
     // Log error in development
-    if (process.env.NODE_ENV === 'development') {
+    if (import.meta.env.DEV) {
       console.error('Error caught by ErrorBoundary:', error, errorInfo);
     }
   }
@@ -116,7 +116,7 @@ const ErrorBoundaryFallback: React.FC<ErrorBoundaryFallbackProps> = ({
   error,
   errorInfo,
   fallbackMessage,
-  showDetails = process.env.NODE_ENV === 'development',
+  showDetails = import.meta.env.DEV,
   showReset = true,
   onReset,
 }) => {
