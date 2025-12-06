@@ -484,6 +484,37 @@
 
 [data-theme="dark"] .hint {
   background: var(--bg-secondary-dark, #252540);
+  color: #c0c0d0;
+}
+
+/* Dark theme: Registration Type cards - improved contrast for hover and selected */
+[data-theme="dark"] .typeButton:hover {
+  border-color: #5a9bff;
+  background: #2a2a4a;
+}
+
+[data-theme="dark"] .typeButton:hover::before {
+  background: linear-gradient(180deg, rgba(90, 155, 255, 0.15) 0%, transparent 100%);
+}
+
+[data-theme="dark"] .typeButton.active {
+  background: linear-gradient(180deg, rgba(90, 155, 255, 0.25) 0%, rgba(90, 155, 255, 0.12) 100%);
+  border-color: #5a9bff;
+  box-shadow: 0 4px 20px rgba(90, 155, 255, 0.25);
+}
+
+[data-theme="dark"] .typeButton.active .typeName {
+  color: #7cb8ff;
+}
+
+[data-theme="dark"] .typeButton.active .typeMultiplier {
+  background: rgba(90, 155, 255, 0.25);
+  color: #7cb8ff;
+}
+
+[data-theme="dark"] .typeMultiplier {
+  background: rgba(255, 255, 255, 0.1);
+  color: #a0a0b0;
 }
 
 /* Responsive */

@@ -362,12 +362,13 @@ export const EuropeMap: React.FC<EuropeMapProps> = ({
               values: regionValues,
               scale: [
                 '#e2e8f0', // 0: Default (not in list)
-                '#4a5568', // 1: In list, no pricing
-                '#38a169', // 2: Has pricing (green)
-                '#4da6ff', // 3: Hovered (light blue)
-                '#0066cc', // 4: Selected (bright blue)
+                '#4a5568', // 1: In list, no pricing - GRAY
+                '#0055EE', // 2: Has pricing - EUROPE BLUE (default state)
+                '#f6ad55', // 3: Hovered - ORANGE (hover state)
+                '#38a169', // 4: Selected - GREEN (selected state)
               ],
-              normalizeFunction: 'linear',
+              min: 0,
+              max: 4,
             },
           ],
         }}
