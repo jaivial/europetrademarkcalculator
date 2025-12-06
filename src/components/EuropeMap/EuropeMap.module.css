@@ -156,15 +156,31 @@
   background: linear-gradient(135deg, #0d1421 0%, #1a202c 50%, #171923 100%);
 }
 
-/* Disable hover effects on touch devices */
+/* Disable hover effects and tooltips on touch/mobile devices */
 @media (pointer: coarse), (hover: none) {
   .mapWrapper :global(.jvectormap-tip) {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
   }
 
   .mapWrapper :global(.jvectormap-zoomin:hover),
   .mapWrapper :global(.jvectormap-zoomout:hover) {
     transform: none;
     box-shadow: none;
+  }
+}
+
+/* Also hide tooltip on small screens as additional fallback */
+@media (max-width: 768px) {
+  .mapWrapper :global(.jvectormap-tip) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 }

@@ -280,15 +280,20 @@ export const EuropeMap: React.FC<EuropeMapProps> = ({
     setHoveredCountry(null);
   }, [setHoveredCountry, isTouchDevice]);
 
-  // Custom tooltip content - disabled on touch devices
+  // Custom tooltip content - completely disabled on touch devices
   const handleRegionTipShow = useCallback(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (event: any, el: any, code: string) => {
-      // Hide tooltip on touch devices
+      // Completely prevent tooltip on touch devices
       if (isTouchDevice) {
-        (event as Event & { preventDefault?: () => void }).preventDefault?.();
-        el.html('');
-        return;
+        event.preventDefault();
+        if (el && el.hide) {
+          el.hide();
+        }
+        if (el && el.css) {
+          el.css('display', 'none');
+        }
+        return false;
       }
 
       const country = findCountry(code);
